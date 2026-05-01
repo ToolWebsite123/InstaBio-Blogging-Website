@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-100 pt-20 pb-10 mt-20 relative overflow-hidden">
+    <footer className="bg-white border-t border-gray-100 pt-20 pb-10 relative overflow-hidden">
       {/* Decorative Gradient Line */}
       <div className="absolute top-0 left-0 w-full h-[3px] bg-[linear-gradient(90deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]"></div>
       

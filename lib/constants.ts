@@ -63,4 +63,4 @@ export const ALL_STORIES = [
     image: "/images/freefire_bio_1.jpeg",
     slug: "best-free-fire-bio-for-instagram",
   },
-];
+].slice(0, 4);

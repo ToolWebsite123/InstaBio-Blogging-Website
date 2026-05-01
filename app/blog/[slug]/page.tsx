@@ -16,9 +16,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   try {
-    const post = getPostBySlug(params.slug);
+    const resolvedParams = await params;
+    const post = getPostBySlug(resolvedParams.slug);
     const seoTitle = post.seoTitle || post.title;
     const seoDescription = post.seoDescription || post.excerpt;
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: seoTitle,
       description: seoDescription,
       alternates: {
-        canonical: `/blog/${params.slug}`,
+        canonical: `/blog/${resolvedParams.slug}`,
       },
       openGraph: {
         title: post.title,
@@ -41,12 +42,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   let post;
   try {
-    post = getPostBySlug(params.slug);
+    const resolvedParams = await params;
+    post = getPostBySlug(resolvedParams.slug);
   } catch (error) {
-    console.error("Error loading post:", params.slug, error);
+    console.error("Error loading post:", error);
     notFound();
   }
 

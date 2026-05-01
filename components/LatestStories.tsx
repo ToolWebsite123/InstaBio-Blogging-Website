@@ -46,7 +46,7 @@ export default function LatestStories() {
 
       {hasMore && (
         <div className="text-center">
-          <button 
+          <button
             onClick={loadMore}
             className="relative group inline-block p-[2px] rounded-full bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >

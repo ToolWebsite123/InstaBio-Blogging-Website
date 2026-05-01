@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0, 0%, 100%;
+  --foreground: 222, 47%, 11%;
+  --card: 0, 0%, 100%;
+  --card-foreground: 222, 47%, 11%;
+  --popover: 0, 0%, 100%;
+  --popover-foreground: 222, 47%, 11%;
+  --primary: 263, 70%, 50%;
+  --primary-foreground: 210, 40%, 98%;
+  --secondary: 210, 40%, 96%;
+  --secondary-foreground: 222, 47%, 11%;
+  --muted: 210, 40%, 96%;
+  --muted-foreground: 215, 16%, 47%;
+  --accent: 263, 70%, 50%;
+  --accent-foreground: 210, 40%, 98%;
+  --destructive: 0, 84%, 60%;
+  --destructive-foreground: 210, 40%, 98%;
+  --border: 214, 32%, 91%;
+  --input: 214, 32%, 91%;
+  --ring: 263, 70%, 50%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222, 84%, 5%;
+  --foreground: 210, 40%, 98%;
+  --card: 222, 84%, 5%;
+  --card-foreground: 210, 40%, 98%;
+  --popover: 222, 84%, 5%;
+  --popover-foreground: 210, 40%, 98%;
+  --primary: 263, 70%, 50%;
+  --primary-foreground: 210, 40%, 98%;
+  --secondary: 217, 33%, 17%;
+  --secondary-foreground: 210, 40%, 98%;
+  --muted: 217, 33%, 17%;
+  --muted-foreground: 215, 20%, 65%;
+  --accent: 263, 70%, 50%;
+  --accent-foreground: 210, 40%, 98%;
+  --destructive: 0, 63%, 31%;
+  --destructive-foreground: 210, 40%, 98%;
+  --border: 217, 33%, 17%;
+  --input: 217, 33%, 17%;
+  --ring: 263, 70%, 50%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .blog-card {
+    @apply transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .search-input {
+    @apply w-full bg-muted border-none rounded-full px-6 py-3 focus:ring-2 focus:ring-accent/20 outline-none transition-all;
+  }
+}
+
+/* Custom Utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

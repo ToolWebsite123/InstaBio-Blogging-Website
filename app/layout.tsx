@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/Providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     siteName: "Instabio.online",
     locale: "en_US",
     type: "website",
+  },
+  verification: {
+    google: "NnWMLvEZRYt5GXepJntRQaCahkQvPPOlB90gJO3b84E",
   },
 };
 

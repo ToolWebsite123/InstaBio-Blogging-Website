@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{width:680px;height:380px;overflow:hidden;font-family:'Segoe UI',system-ui,sans-serif;}
+.bg{
+  width:680px;height:380px;
+  background:linear-gradient(135deg,#0a0a14,#0f1f3d,#1a0a2e);
+  position:relative;display:flex;flex-direction:column;
+  align-items:center;justify-content:space-between;
+  padding:9px 36px 7px;
+}
+.glow1{position:absolute;top:-70px;left:-70px;width:230px;height:230px;border-radius:50%;background:#818CF8;opacity:0.08;filter:blur(48px);pointer-events:none;}
+.glow2{position:absolute;bottom:-70px;right:-70px;width:260px;height:260px;border-radius:50%;background:#C7D2FE;opacity:0.06;filter:blur(52px);pointer-events:none;}
+.geo-border{position:absolute;top:8px;left:8px;right:8px;bottom:8px;border:1px solid #818CF8;border-radius:20px;opacity:0.07;pointer-events:none;}
+.head-wrap{text-align:center;z-index:2;}
+.headline{color:#fff;font-size:20px;font-weight:900;text-shadow:0 2px 14px rgba(0,0,0,0.65);letter-spacing:-0.4px;line-height:1.2;}
+.subtitle{color:#818CF8;font-size:11.5px;font-weight:700;margin-top:3px;letter-spacing:0.3px;text-shadow:0 1px 8px rgba(0,0,0,0.5);}
+.card{background:#fff;border-radius:18px;width:608px;box-shadow:0 16px 50px rgba(0,0,0,0.45);overflow:hidden;z-index:2;}
+.card-top{display:flex;align-items:center;padding:12px 15px 10px;gap:12px;background:#fff;border-bottom:1.5px solid #f0f0f0;}
+.av-outer{flex-shrink:0;width:80px;height:80px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#0a0a14,#0f1f3d,#1a0a2e);box-shadow:0 4px 18px rgba(0,0,0,0.35);}
+.av-inner{width:74px;height:74px;border-radius:50%;overflow:hidden;border:2.5px solid #fff;}
+.av-inner img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+.badge-pill{display:inline-block;background:linear-gradient(135deg,#0a0a14,#0f1f3d,#1a0a2e);color:#fff;font-size:9.5px;font-weight:700;padding:2px 10px;border-radius:20px;width:fit-content;margin-top:4px;}
+.right-col{flex:1;display:flex;flex-direction:column;gap:8px;}
+.uname{font-size:13px;font-weight:800;color:#111;letter-spacing:-0.2px;}
+.stats-row{display:flex;gap:16px;}
+.stat{text-align:center;}
+.snum{font-size:16px;font-weight:800;color:#111;}
+.slabel{font-size:9.5px;color:#888;margin-top:1px;}
+.btn-row{display:flex;gap:7px;}
+.edit-btn{background:#fff;border:1.5px solid #dbdbdb;border-radius:8px;padding:5px 13px;font-size:11px;font-weight:600;color:#111;}
+.follow-btn{background:#818CF8;border:none;border-radius:8px;padding:5px 12px;font-size:11px;font-weight:700;color:#fff;}
+.ig-badge{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0a0a14,#0f1f3d,#1a0a2e);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
+.bio-area{padding:9px 16px 9px;background:#fff;}
+.site-link{font-size:10.5px;font-weight:700;color:#818CF8;margin-bottom:4px;display:block;}
+.domain-bar{text-align:center;z-index:2;display:flex;align-items:center;justify-content:center;gap:8px;}
+.domain{color:rgba(255,255,255,0.72);font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+.dpill{background:#818CF8;color:#000;font-size:9px;font-weight:800;padding:2px 8px;border-radius:10px;}
+</style>
+</head>
+<body>
+<div class="bg">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="geo-border"></div>
+  
+    <div style="position:absolute;top:10px;right:24px;font-size:28px;opacity:0.12;pointer-events:none;color:#818CF8;">☪️</div>
+    <div style="position:absolute;bottom:28px;left:22px;font-size:22px;opacity:0.1;pointer-events:none;color:#818CF8;">🕋</div>
+    <div style="position:absolute;top:45%;right:16px;width:60px;height:60px;border:1.5px solid #818CF8;border-radius:50%;opacity:0.08;pointer-events:none;"></div>
+    <div style="position:absolute;top:42%;right:22px;width:46px;height:46px;border:1px solid #C7D2FE;transform:rotate(45deg);opacity:0.07;pointer-events:none;"></div>
+    
+  <div class="head-wrap">
+    <div class="headline">Islamic Bio — Boys Edition</div>
+    <div class="subtitle">In the End, It's Just You and Allah 💙</div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+        <div class="av-outer"><div class="av-inner"><img src="data:image/png;base64,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" alt="DP"></div></div>
+        <div class="badge-pill">💙 Trust Allah</div>
+      </div>
+      <div class="right-col">
+        <div class="uname">believer.boy.real</div>
+        <div class="stats-row">
+          <div class="stat"><div class="snum">186</div><div class="slabel">Posts</div></div>
+          <div class="stat"><div class="snum">11.4k</div><div class="slabel">Followers</div></div>
+          <div class="stat"><div class="snum">347</div><div class="slabel">Following</div></div>
+        </div>
+        <div class="btn-row">
+          <button class="edit-btn">Edit Profile</button>
+          <button class="follow-btn">Follow</button>
+        </div>
+      </div>
+      <div class="ig-badge">
+        <svg width="27" height="27" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="6" stroke="white" stroke-width="2.2"/>
+          <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2.2"/>
+          <circle cx="17.5" cy="6.5" r="1.3" fill="white"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bio-area">
+      <span class="site-link">🔗 instabio.online</span>
+      <div style="font-size:13px;font-weight:700;color:#111;opacity:1.00;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">♥️ Mr. Khan With a Gentle Heart ✌️</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.94;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">😊 Alhamdulillah for Every Single Moment 💫</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.88;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Attitude Boy Anchored by the Quran ⚔️</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.82;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Quran Lover — First, Last and Always ♦️</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.76;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">💙 Love = Mom, Dad and Every Sincere Dua</div>
+    </div>
+  </div>
+  <div class="domain-bar">
+    <span class="domain">instabio.online</span>
+    <span class="dpill">☪️ 2026</span>
+  </div>
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import BioCard from "@/components/BioCard";
 import BioGrid from "@/components/BioGrid";
+import BioBanner from "@/components/BioBanner";
 import TOC from "@/components/TOC";
 import { format } from "date-fns";
 import { Calendar, Clock } from "lucide-react";
@@ -84,7 +85,20 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     ),
     BioCard: (props: any) => <BioCard {...props} />,
     BioGrid: (props: any) => <BioGrid {...props} />,
-    TOC: (props: any) => <TOC {...props} />
+    BioBanner: (props: any) => <BioBanner {...props} />,
+    TOC: (props: any) => <TOC {...props} />,
+    img: ({ src, alt, ...props }: any) => (
+      <span className="my-8 flex justify-center not-prose">
+        <Image
+          src={src}
+          alt={alt || ""}
+          width={680}
+          height={380}
+          className="rounded-2xl border border-gray-100 shadow-md"
+          {...props}
+        />
+      </span>
+    ),
   };
 
   const relatedPosts = getAllPosts().filter(p => p.slug !== post.slug).slice(0, 3);

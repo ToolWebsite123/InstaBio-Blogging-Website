@@ -114,6 +114,7 @@ function insertBannersIntoMdx(slug, mappings) {
       );
       const sectionBlock = content.match(sectionBlockRe)?.[0] || "";
       if (/<BioBanner/.test(sectionBlock)) continue;
+      if (sectionBlock.includes(banners[0].bannerSrc)) continue;
 
       const topRe = new RegExp(
         `(## ${escaped}\\n(?:\\n(?!## |<BioGrid>|<BioBanner)[^\\n].+)*\\n)(<BioGrid>)`,

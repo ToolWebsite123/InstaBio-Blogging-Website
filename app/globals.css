@@ -48,6 +48,11 @@
 }
 
 @layer base {
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-inter), sans-serif;
@@ -62,9 +67,24 @@
   }
 }
 
+@layer utilities {
+  .safe-x {
+    padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  }
+
+  .safe-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  }
+}
+
 @layer components {
   .container-wide {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0;
+  }
+
+  .page-section {
+    @apply w-full min-w-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .blog-card {
@@ -89,4 +109,83 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Hide scrollbar for horizontal category strips */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent long bios / URLs from causing horizontal scroll */
+.prose-bio,
+.prose {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.prose pre,
+.prose table {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose img,
+.prose video,
+.prose iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose figure {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+.prose-bio > figure,
+.prose-bio > * {
+  max-width: 100%;
+}
+
+/* Scale fixed 680px banner iframes to fit mobile containers */
+.bio-banner-host {
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 680 / 380;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .bio-banner-host {
+    border-radius: 1rem;
+  }
+}
+
+.bio-banner-host iframe {
+  width: 680px;
+  height: 380px;
+  border: 0;
+  display: block;
+  transform-origin: top left;
+  transform: scale(calc(100cqw / 680px));
+}
+
+@media (max-width: 639px) {
+  .prose-bio h2,
+  .prose h2 {
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  .prose-bio h3,
+  .prose h3 {
+    font-size: 1.125rem;
+  }
 }

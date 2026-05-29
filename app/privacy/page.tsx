@@ -16,13 +16,13 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-[#f8f9fa] py-12 md:py-20 px-4">
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
-          <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
             Privacy Policy — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
           </h1>
         </header>
 
         {/* Main Content Card */}
-        <div className="bg-white rounded-[40px] shadow-sm border border-gray-100 p-8 md:p-16 space-y-12">
+        <div className="bg-white rounded-2xl md:rounded-[30px] lg:rounded-[40px] shadow-sm border border-gray-100 p-6 sm:p-8 md:p-12 lg:p-16 space-y-12">
           
           {/* Introduction */}
           <section>

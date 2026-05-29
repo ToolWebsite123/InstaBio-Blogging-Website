@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Providers";
@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} ${playfair.variable} min-h-screen flex flex-col antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,7 +55,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-1 flex flex-col">{children}</main>
+          <main className="flex-1 flex flex-col w-full min-w-0 overflow-x-hidden">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

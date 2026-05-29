@@ -16,13 +16,13 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#f8f9fa] py-12 md:py-20 px-4">
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
-          <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
             Contact Us — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
           </h1>
         </header>
 
         {/* Main Content Card */}
-        <div className="bg-white rounded-[40px] shadow-sm border border-gray-100 p-8 md:p-16 space-y-12">
+        <div className="bg-white rounded-2xl md:rounded-[30px] lg:rounded-[40px] shadow-sm border border-gray-100 p-6 sm:p-8 md:p-12 lg:p-16 space-y-12">
           
           {/* Introduction */}
           <section>
@@ -47,14 +47,14 @@ export default function ContactPage() {
             </div>
             
             <div className="space-y-4">
-              <div className="bg-gray-50/80 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="bg-gray-50/80 p-4 sm:p-6 rounded-2xl border border-gray-100 flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-4">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-[#D62976]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                   </div>
                   <div>
                     <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Email</p>
-                    <a href="mailto:contact@instabio.online" className="text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors">contact@instabio.online</a>
+                    <a href="mailto:contact@instabio.online" className="text-base sm:text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors break-all">contact@instabio.online</a>
                   </div>
                 </div>
                 
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Website</p>
-                    <Link href="/" className="text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors">https://instabio.online</Link>
+                    <Link href="/" className="text-base sm:text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors break-all">https://instabio.online</Link>
                   </div>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Response Time</p>
-                  <p className="text-lg font-bold text-[#262626]">Within 24–48 hours on business days</p>
+                  <p className="text-base sm:text-lg font-bold text-[#262626]">Within 24–48 hours on business days</p>
                 </div>
               </div>
             </div>

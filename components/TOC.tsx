@@ -28,21 +28,21 @@ const TOC: React.FC = () => {
   }
 
   return (
-    <div className="my-10 bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 shadow-sm overflow-hidden relative group">
+    <div className="my-8 sm:my-10 bg-gradient-to-br from-gray-50 to-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-gray-100 shadow-sm overflow-hidden relative group">
       {/* Abstract Background Decoration */}
       <div className="absolute -top-10 -right-10 w-32 h-32 bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976)] opacity-[0.05] rounded-full blur-3xl group-hover:opacity-10 transition-opacity"></div>
       
       <div className="flex items-center mb-6">
         <div className="w-1.5 h-6 bg-[linear-gradient(to_bottom,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] mr-3 rounded-full"></div>
-        <h3 className="text-xl font-bold text-gray-900 uppercase tracking-wide">Quick Navigation</h3>
+        <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 uppercase tracking-wide">Quick Navigation</h3>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-3 sm:gap-y-4">
         {items.map((item, index) => (
           <a
             key={index}
             href={`#${item.slug}`}
-            className={`flex items-center group/item py-2 px-3 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-300 ${item.level === 3 ? "ml-6 opacity-80 scale-95" : ""}`}
+            className={`flex items-center group/item py-2 px-2 sm:px-3 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-300 min-w-0 ${item.level === 3 ? "ml-3 sm:ml-6 opacity-80" : ""}`}
             onClick={(e) => {
               e.preventDefault();
               const element = document.getElementById(item.slug);
@@ -63,7 +63,7 @@ const TOC: React.FC = () => {
             <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center text-xs font-bold border border-gray-100 transition-colors mr-3 shadow-sm ${item.level === 3 ? "text-gray-400" : "text-[#D62976] group-hover/item:border-[#D62976]/30 group-hover/item:bg-[#D62976]/5"}`}>
               {index + 1}
             </div>
-            <span className={`font-medium transition-colors line-clamp-1 ${item.level === 3 ? "text-[13px] text-gray-500" : "text-[15px] text-gray-600 group-hover/item:text-[#D62976]"}`}>
+            <span className={`font-medium transition-colors line-clamp-2 min-w-0 flex-1 ${item.level === 3 ? "text-xs sm:text-[13px] text-gray-500" : "text-sm sm:text-[15px] text-gray-600 group-hover/item:text-[#D62976]"}`}>
               {item.title}
             </span>
             <ChevronRight className={`w-4 h-4 ml-auto text-gray-300 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-1 transition-all`} />

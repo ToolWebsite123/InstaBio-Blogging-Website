@@ -16,17 +16,17 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#f8f9fa] py-12 md:py-20 px-4">
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
-          <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
             About Us — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
           </h1>
         </header>
 
         {/* Main Content Card */}
-        <div className="bg-white rounded-[40px] shadow-sm border border-gray-100 p-8 md:p-16 space-y-16">
+        <div className="bg-white rounded-2xl md:rounded-[30px] lg:rounded-[40px] shadow-sm border border-gray-100 p-6 sm:p-8 md:p-12 lg:p-16 space-y-16">
           
           {/* About Section */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#262626] mb-6">About Instabio.online</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#262626] mb-4 sm:mb-6">About Instabio.online</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
               Welcome to <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabio.online</Link> — your go-to destination for creative, inspiring, and ready-to-use Instagram bio ideas, captions, and personal branding tips. We help individuals, influencers, and businesses craft the perfect online identity.
             </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
           {/* Our Mission */}
           <section className="bg-gray-50/50 p-8 md:p-10 rounded-[30px] border border-gray-50">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6">
               <div className={`w-12 h-12 rounded-2xl ${brandGradient} flex items-center justify-center text-white shrink-0 shadow-lg`}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
@@ -52,8 +52,8 @@ export default function AboutPage() {
 
           {/* What We Offer */}
           <section>
-            <div className="flex items-center gap-4 mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#262626]">What We Offer</h2>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#262626] shrink-0">What We Offer</h2>
               <div className={`h-1 flex-1 rounded-full ${brandGradient} opacity-20`}></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -75,9 +75,9 @@ export default function AboutPage() {
           </section>
 
           {/* Our Story */}
-          <section className="relative overflow-hidden p-8 md:p-12 rounded-[40px] bg-[#262626] text-white">
+          <section className="relative overflow-hidden p-6 sm:p-8 md:p-12 rounded-2xl md:rounded-[30px] lg:rounded-[40px] bg-[#262626] text-white">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] opacity-10 blur-3xl -mr-20 -mt-20 rounded-full"></div>
-            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Our Story</h2>
             <div className="space-y-6 relative z-10">
               <p className="text-gray-300 text-lg leading-relaxed">
                 <span className="font-bold text-white">Instabio.online</span> was started by a passionate team of writers and digital creators who were frustrated by the lack of quality bio inspiration online. We saw millions of people struggling to write just 150 characters about themselves — and we knew we could help.

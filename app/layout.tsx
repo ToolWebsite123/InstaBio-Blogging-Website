@@ -55,7 +55,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-1 flex flex-col w-full min-w-0 overflow-x-hidden">{children}</main>
+          <main className="flex-1 flex flex-col w-full min-w-0 overflow-x-hidden pt-14 sm:pt-16 md:pt-20">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

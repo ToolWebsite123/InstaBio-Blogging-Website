@@ -32,12 +32,8 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-[100]">
-      <div
-        className={`max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-16 md:h-20 flex items-center justify-between gap-2 min-w-0 transition-opacity lg:opacity-100 lg:pointer-events-auto ${
-          isMobileMenuOpen ? "lg:opacity-100 opacity-0 pointer-events-none" : "opacity-100"
-        }`}
-      >
+    <header className="fixed top-0 left-0 right-0 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 z-[100]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-16 md:h-20 flex items-center justify-between gap-2 min-w-0 w-full">
         <Link
           href="/"
           className="min-w-0 max-w-[58%] sm:max-w-none text-base sm:text-xl md:text-2xl font-black bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] tracking-tighter hover:opacity-80 transition-opacity shrink"

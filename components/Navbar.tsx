@@ -10,11 +10,11 @@ export default function Navbar() {
   const [isMounted, setIsMounted] = useState(false);
 
   const navLinks = [
-    { name: "Home", shortName: "Home", href: "/" },
-    { name: "Instagram Bio for Girl", shortName: "Bio for Girls", href: "/blog/best-instagram-bio-for-girls" },
-    { name: "Instagram Bio for Boy", shortName: "Bio for Boys", href: "/blog/best-instagram-bio-for-boys" },
-    { name: "Instagram Bio for Free Fire", shortName: "Free Fire", href: "/blog/best-free-fire-bio-for-instagram" },
-    { name: "Instagram Blog", shortName: "Blog", href: "/blog" },
+    { name: "Home", href: "/" },
+    { name: "Instagram Bio for Girl", href: "/blog/best-instagram-bio-for-girls" },
+    { name: "Instagram Bio for Boy", href: "/blog/best-instagram-bio-for-boys" },
+    { name: "Instagram Bio for Free Fire", href: "/blog/best-free-fire-bio-for-instagram" },
+    { name: "Instagram Blog", href: "/blog" },
   ];
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function Navbar() {
               title={link.name}
               className="text-xs xl:text-sm font-semibold text-[#262626] hover:text-[#D62976] transition-all duration-300 relative group whitespace-nowrap"
             >
-              {link.shortName}
+              {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[linear-gradient(90deg,#4F5BD5,#D62976)] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}

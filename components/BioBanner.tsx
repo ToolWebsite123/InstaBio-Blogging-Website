@@ -58,7 +58,7 @@ export default function BioBanner({ src, title = "Instagram bio preview" }: BioB
   return (
     <div
       ref={hostRef}
-      className="bio-banner-scale-host relative my-6 sm:my-8 w-full min-w-0 max-w-full aspect-[680/380] overflow-hidden rounded-xl sm:rounded-2xl border border-gray-100 bg-gray-50 shadow-md"
+      className="bio-banner-scale-host not-prose relative my-6 sm:my-8 w-full min-w-0 max-w-full aspect-[680/380] overflow-hidden rounded-xl sm:rounded-2xl border border-gray-100 bg-gray-50 shadow-md"
     >
       <div
         className="absolute top-0 left-0 origin-top-left"

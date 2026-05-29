@@ -6,7 +6,7 @@ import type { PostMeta } from "@/lib/mdx";
 export default function FeaturedPost({ post }: { post: PostMeta }) {
   return (
     <Link href={`/blog/${post.slug}`} className="group flex flex-col md:flex-row border border-border rounded-lg overflow-hidden bg-card hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
-      <div className="relative w-full md:w-1/2 aspect-video md:aspect-auto md:min-h-[320px] overflow-hidden border-b md:border-b-0 md:border-r border-border">
+      <div className="relative w-full md:w-1/2 aspect-video md:aspect-auto md:min-h-[320px] overflow-hidden border-b md:border-b-0 md:border-r border-border shrink-0">
         <Image
           src={post.image}
           alt={post.title}

@@ -17,7 +17,7 @@ export default function FeaturedPosts({ posts }: { posts: Post[] }) {
               href={`/blog/${post.slug}`}
               className="group space-y-6"
             >
-              <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-muted">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-muted shrink-0">
                 <Image 
                   src={post.image} 
                   alt={post.title} 

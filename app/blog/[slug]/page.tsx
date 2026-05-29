@@ -1,7 +1,7 @@
 import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import MdxPostImage from "@/components/MdxPostImage";
 import BioCard from "@/components/BioCard";
 import BioGrid from "@/components/BioGrid";
 import BioBanner from "@/components/BioBanner";
@@ -88,17 +88,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     BioBanner: (props: any) => <BioBanner {...props} />,
     TOC: (props: any) => <TOC {...props} />,
     img: ({ src, alt }: { src: string; alt?: string }) => (
-      <figure className="my-6 sm:my-8 w-full min-w-0 max-w-full overflow-hidden not-prose">
-        <div className="relative w-full max-w-full aspect-[4/3] sm:aspect-[680/380] overflow-hidden rounded-xl sm:rounded-2xl border border-gray-100 shadow-md bg-gray-50">
-          <Image
-            src={src}
-            alt={alt || ""}
-            fill
-            sizes="(max-width: 768px) 100vw, 680px"
-            className="object-cover object-center w-full h-full"
-          />
-        </div>
-      </figure>
+      <MdxPostImage src={src} alt={alt} />
     ),
   };
 
@@ -119,7 +109,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       {/* Content Section */}
       <main className="w-full min-w-0 max-w-[800px] mx-auto px-4 sm:px-6 py-10 md:py-16 overflow-x-hidden">
-        <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none min-w-0 prose-bio
+        <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none min-w-0 prose-bio prose-bio-content
           prose-ul:list-none prose-ul:pl-0 
           prose-a:text-[#D62976] prose-a:no-underline hover:prose-a:underline">
           <MDXRemote source={post.content} components={components} />

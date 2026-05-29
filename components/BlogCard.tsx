@@ -1,20 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import { format } from "date-fns";
 import type { PostMeta } from "@/lib/mdx";
+import StoryCardImage from "@/components/StoryCardImage";
 
 export default function BlogCard({ post }: { post: PostMeta }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-md transition-all duration-300">
-      <div className="relative aspect-video w-full overflow-hidden border-b border-border">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
+    <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-md transition-all duration-300 min-w-0">
+      <StoryCardImage src={post.image} alt={post.title} className="border-b border-border rounded-none" />
       
       <div className="flex flex-col flex-1 p-5">
         <div className="mb-3">

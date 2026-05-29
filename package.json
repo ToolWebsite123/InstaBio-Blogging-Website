@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.js && next build",
+    "build": "node scripts/generate-sitemap.js && set NODE_OPTIONS=--max_old_space_size=4096 && next build",
     "sitemap": "node scripts/generate-sitemap.js",
     "banners": "node scripts/insert-banner-images.js",
     "start": "next start",

@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import StoryCardImage, { STORY_CARD_SIZES_FEATURED } from "@/components/StoryCardImage";
 import { useState, useEffect } from "react";
 import { ALL_STORIES } from "@/lib/constants";
 
@@ -39,15 +39,12 @@ export default function FeaturedStories() {
             className="block group transition-all duration-500 min-w-0 w-full"
           >
             <article className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col h-full cursor-pointer min-w-0">
-              <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-gray-100">
-                <Image
-                  src={story.image}
-                  alt={story.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+              <StoryCardImage
+                src={story.image}
+                alt={story.title}
+                sizes={STORY_CARD_SIZES_FEATURED}
+                priority
+              />
               <div className="p-4 sm:p-5 md:p-8 flex flex-col flex-1 min-w-0">
                 <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] mb-2 md:mb-4">
                   {story.tag}

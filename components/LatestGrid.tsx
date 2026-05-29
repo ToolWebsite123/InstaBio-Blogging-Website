@@ -21,7 +21,7 @@ export default function LatestGrid({ posts }: { posts: Post[] }) {
                   className="group block blog-card"
                 >
                   <div className="space-y-5">
-                    <div className="relative aspect-[3/2] overflow-hidden rounded bg-muted">
+                    <div className="relative aspect-[3/2] overflow-hidden rounded bg-muted shrink-0">
                       <Image 
                         src={post.image} 
                         alt={post.title} 

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import StoryCardImage from "@/components/StoryCardImage";
 import { ALL_STORIES } from "@/lib/constants";
 import type { Metadata } from "next";
 
@@ -27,15 +27,7 @@ export default function BlogPage() {
           {ALL_STORIES.map((story) => (
             <Link href={`/blog/${story.slug}`} key={story.id} className="block group min-w-0 w-full">
               <article className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col h-full cursor-pointer min-w-0">
-                <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-gray-100">
-                  <Image
-                    src={story.image}
-                    alt={story.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+                <StoryCardImage src={story.image} alt={story.title} />
                 <div className="p-4 sm:p-6 flex flex-col flex-1 min-w-0">
                   <span className="text-xs font-bold uppercase tracking-wider bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] mb-3">
                     {story.tag}

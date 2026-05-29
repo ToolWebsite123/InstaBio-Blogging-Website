@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Instabio.online">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F5BD5"/>
+      <stop offset="35%" stop-color="#962FBF"/>
+      <stop offset="65%" stop-color="#D62976"/>
+      <stop offset="100%" stop-color="#FA7E1E"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="40" fill="url(#brand)"/>
+  <text x="90" y="122" text-anchor="middle" fill="#fff" font-size="100" font-weight="800" font-family="system-ui,-apple-system,sans-serif">I</text>
+</svg>

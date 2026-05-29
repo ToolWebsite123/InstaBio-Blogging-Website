@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import Logo from "@/components/Logo";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -65,10 +66,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-16 md:h-20 flex items-center justify-between gap-2 min-w-0 w-full">
         <Link
           href="/"
-          className="min-w-0 max-w-[58%] sm:max-w-none text-base sm:text-xl md:text-2xl font-black tracking-tighter hover:opacity-80 transition-opacity shrink"
+          className="flex items-center gap-2 sm:gap-2.5 min-w-0 max-w-[72%] sm:max-w-none hover:opacity-90 transition-opacity shrink"
         >
-          <span className="sm:hidden bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">Instabio</span>
-          <span className="hidden sm:inline bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">Instabio.online</span>
+          <Logo size={32} className="shrink-0 w-8 h-8 sm:w-9 sm:h-9" />
+          <span className="min-w-0 text-base sm:text-xl md:text-2xl font-black tracking-tighter truncate">
+            <span className="sm:hidden bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">
+              Instabio
+            </span>
+            <span className="hidden sm:inline bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">
+              Instabio.online
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center justify-end gap-4 xl:gap-6 flex-1 min-w-0 ml-4">

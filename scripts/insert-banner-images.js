@@ -17,6 +17,7 @@ const POST_FOLDER_MAP = {
   "sad-bio-for-instagram": "sad bio for instagram",
   "professional-instagram-bio": "professional instagram bio",
   "best-free-fire-bio-for-instagram": "free fire instagram bio",
+  "best-love-bio-for-instagram": "love bio for instagram",
 };
 
 const HEADLINE_TO_SECTION = {
@@ -29,6 +30,7 @@ const HEADLINE_TO_SECTION = {
   "sad bio for instagram for boys": "best sad bio for instagram",
   "attitude bio for instagram for girls": "instagram bio for girls attitude",
   "attitude girls instagram bios": "instagram bio for girls attitude",
+  "love is not fake lovers are fake bio": "love is not fake lovers are fake instagram bio",
 };
 
 function normalize(text) {
@@ -40,8 +42,12 @@ function normalize(text) {
 }
 
 function extractHeadline(html) {
-  const m = html.match(/class="headline"[^>]*>([^<]+)</);
-  return m ? m[1].trim() : null;
+  const headline = html.match(/class="headline"[^>]*>([^<]+)</);
+  if (headline) return headline[1].trim();
+  const mainTitle = html.match(/class="main-title"[^>]*>([^<]+)</);
+  if (mainTitle) return mainTitle[1].trim();
+  const titleTag = html.match(/<title>([^<]+)<\/title>/i);
+  return titleTag ? titleTag[1].trim() : null;
 }
 
 function sectionKey(headline) {
@@ -95,10 +101,6 @@ function insertBannersIntoMdx(slug, mappings) {
 
     const escaped = sectionTitle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const topTag = bannerTag(banners[0].bannerSrc, banners[0].title);
-    const bottomTag =
-      banners.length > 1
-        ? bannerTag(banners[banners.length - 1].bannerSrc, banners[banners.length - 1].title)
-        : topTag;
 
     const hasGrid = new RegExp(
       `## ${escaped}(?:(?!\\n## )[\\s\\S])*?<BioGrid>`,
@@ -106,21 +108,22 @@ function insertBannersIntoMdx(slug, mappings) {
     ).test(content);
 
     if (hasGrid) {
+      const sectionBlockRe = new RegExp(
+        `## ${escaped}(?:(?!\\n## )[\\s\\S])*?<BioGrid>`,
+        "m"
+      );
+      const sectionBlock = content.match(sectionBlockRe)?.[0] || "";
+      if (/<BioBanner/.test(sectionBlock)) continue;
+
       const topRe = new RegExp(
         `(## ${escaped}\\n(?:\\n(?!## |<BioGrid>|<BioBanner)[^\\n].+)*\\n)(<BioGrid>)`,
         "m"
       );
-      let next = content.replace(topRe, `$1\n${topTag}\n\n$2`);
-
-      const bottomRe = new RegExp(
-        `(## ${escaped}(?:(?!\\n## )[\\s\\S])*?</BioGrid>)\\n(?:\\n(?:!\\[[^\\]]*\\]\\([^)]+\\)|<BioBanner[^/]*/>)\\n)?`,
-        "m"
-      );
-      next = next.replace(bottomRe, `$1\n\n${banners.length > 1 ? bottomTag : topTag}\n`);
+      const next = content.replace(topRe, `$1\n${topTag}\n\n$2`);
 
       if (next !== content) {
         content = next;
-        inserted += banners.length > 1 ? 2 : 1;
+        inserted++;
       }
     } else {
       const introRe = new RegExp(

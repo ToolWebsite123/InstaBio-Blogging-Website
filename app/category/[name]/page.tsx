@@ -41,7 +41,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
       <section className="page-section py-10 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {stories.map((story) => (
-            <Link href={`/blog/${story.slug}`} key={story.id} className="block group min-w-0 w-full">
+            <Link href={`/${story.slug}`} key={story.id} className="block group min-w-0 w-full">
               <article className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col h-full min-w-0">
                 <StoryCardImage src={story.image} alt={story.title} />
                 <div className="p-4 sm:p-6 flex flex-col flex-1 min-w-0">

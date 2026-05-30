@@ -5,7 +5,7 @@ import StoryCardImage from "@/components/StoryCardImage";
 
 export default function BlogCard({ post }: { post: PostMeta }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-md transition-all duration-300 min-w-0">
+    <Link href={`/${post.slug}`} className="group flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-md transition-all duration-300 min-w-0">
       <StoryCardImage src={post.image} alt={post.title} className="border-b border-border rounded-none" />
       
       <div className="flex flex-col flex-1 p-5">

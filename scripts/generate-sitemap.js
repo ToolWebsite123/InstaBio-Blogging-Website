@@ -45,7 +45,7 @@ function getBlogEntries() {
       const source = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
       const { data } = matter(source);
       return {
-        loc: `${BASE_URL}/blog/${slug}`,
+        loc: `${BASE_URL}/${slug}`,
         priority: "0.8",
         lastmod: toLastmod(data.date),
       };

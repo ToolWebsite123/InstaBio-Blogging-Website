@@ -17,7 +17,7 @@ export default function LatestGrid({ posts }: { posts: Post[] }) {
               {posts.map((post) => (
                 <Link 
                   key={post.slug} 
-                  href={`/blog/${post.slug}`}
+                  href={`/${post.slug}`}
                   className="group block blog-card"
                 >
                   <div className="space-y-5">
@@ -63,7 +63,7 @@ export default function LatestGrid({ posts }: { posts: Post[] }) {
                 {posts.slice(0, 4).map((post, i) => (
                   <Link 
                     key={post.slug} 
-                    href={`/blog/${post.slug}`}
+                    href={`/${post.slug}`}
                     className="flex gap-4 group"
                   >
                     <span className="text-2xl font-bold text-muted/30 font-['Playfair_Display',serif]">

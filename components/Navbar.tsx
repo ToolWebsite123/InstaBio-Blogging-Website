@@ -12,9 +12,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Instagram Bio for Girl", href: "/blog/best-instagram-bio-for-girls" },
-    { name: "Instagram Bio for Boy", href: "/blog/best-instagram-bio-for-boys" },
-    { name: "Instagram Bio for Free Fire", href: "/blog/best-free-fire-bio-for-instagram" },
+    { name: "Instagram Bio for Girl", href: "/best-instagram-bio-for-girls" },
+    { name: "Instagram Bio for Boy", href: "/best-instagram-bio-for-boys" },
+    { name: "Instagram Bio for Free Fire", href: "/best-free-fire-bio-for-instagram" },
     { name: "Instagram Blog", href: "/blog" },
   ];
 

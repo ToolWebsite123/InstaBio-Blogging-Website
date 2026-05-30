@@ -14,7 +14,7 @@ export default function FeaturedPosts({ posts }: { posts: Post[] }) {
           {posts.slice(0, 2).map((post) => (
             <Link 
               key={post.slug} 
-              href={`/blog/${post.slug}`}
+              href={`/${post.slug}`}
               className="group space-y-6"
             >
               <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-muted shrink-0">

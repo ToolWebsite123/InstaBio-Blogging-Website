@@ -34,7 +34,7 @@ export default function FeaturedStories() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {displayStories.map((story) => (
           <Link
-            href={`/blog/${story.slug}`}
+            href={`/${story.slug}`}
             key={story.id}
             className="block group transition-all duration-500 min-w-0 w-full"
           >

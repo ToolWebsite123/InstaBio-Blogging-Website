@@ -30,9 +30,7 @@ export function getPostSlugs() {
 export function getPostBySlug(slug: string): Post {
   const realSlug = slug.replace(/\.mdx$/, '');
   const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
-  console.log("Reading file:", fullPath);
   if (!fs.existsSync(fullPath)) {
-    console.error("File does not exist:", fullPath);
     throw new Error(`Post not found: ${fullPath}`);
   }
   const fileContents = fs.readFileSync(fullPath, 'utf8');

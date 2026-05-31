@@ -18,6 +18,10 @@ const POST_FOLDER_MAP = {
   "professional-instagram-bio": "professional instagram bio",
   "best-free-fire-bio-for-instagram": "free fire instagram bio",
   "best-love-bio-for-instagram": "love bio for instagram",
+  "gangster-bio-for-instagram": "Gangster bio for instagram",
+  "short-bio-for-instagram": "Short Bio For Instagram",
+  "funny-instagram-bio": "funny isstagram bio",
+  "aesthetic-bio-for-instagram-for-girl": "Aesthetic instgram bio for girls",
 };
 
 const HEADLINE_TO_SECTION = {

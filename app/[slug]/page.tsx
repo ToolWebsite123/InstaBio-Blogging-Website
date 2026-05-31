@@ -48,8 +48,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   try {
     const resolvedParams = await params;
     post = getPostBySlug(resolvedParams.slug);
-  } catch (error) {
-    console.error("Error loading post:", error);
+  } catch {
     notFound();
   }
 

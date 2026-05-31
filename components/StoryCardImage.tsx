@@ -15,6 +15,8 @@ type StoryCardImageProps = {
   sizes?: string;
   priority?: boolean;
   className?: string;
+  /** Override default 16/10 crop (e.g. featured carousel cards). */
+  aspectClass?: string;
 };
 
 export default function StoryCardImage({
@@ -23,10 +25,11 @@ export default function StoryCardImage({
   sizes = STORY_CARD_SIZES_GRID,
   priority = false,
   className = "",
+  aspectClass = STORY_CARD_ASPECT_CLASS,
 }: StoryCardImageProps) {
   return (
     <div
-      className={`story-card-image relative w-full ${STORY_CARD_ASPECT_CLASS} overflow-hidden bg-gray-100 shrink-0 ${className}`}
+      className={`story-card-image relative w-full ${aspectClass} overflow-hidden bg-gray-100 shrink-0 ${className}`}
     >
       <Image
         src={src}

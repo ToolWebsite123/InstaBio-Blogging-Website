@@ -1,5 +1,37 @@
 export const ALL_STORIES = [
   {
+    id: 15,
+    tag: "AESTHETIC BIO",
+    title: "Aesthetic Bio for Instagram for Girl — Soft & Stylish Bios",
+    date: "May 31, 2026",
+    image: "/images/girl_bio_1.jpeg",
+    slug: "aesthetic-bio-for-instagram-for-girl",
+  },
+  {
+    id: 14,
+    tag: "FUNNY BIO",
+    title: "Funny Instagram Bio — Witty, Clever & Hilarious Bios",
+    date: "May 31, 2026",
+    image: "/images/boy_bio_3.jpeg",
+    slug: "funny-instagram-bio",
+  },
+  {
+    id: 13,
+    tag: "SHORT BIO",
+    title: "Short Bio For Instagram — Stylish, Cute & Attitude Bios",
+    date: "May 31, 2026",
+    image: "/images/girl_bio_3.jpeg",
+    slug: "short-bio-for-instagram",
+  },
+  {
+    id: 12,
+    tag: "GANGSTER BIO",
+    title: "Best Gangster Bio For Instagram – Attitude, Boys & Copy Paste Bios",
+    date: "May 31, 2026",
+    image: "/images/boy_bio_2.jpeg",
+    slug: "gangster-bio-for-instagram",
+  },
+  {
     id: 9,
     tag: "PROFESSIONAL",
     title: "Professional Instagram Bio — 200+ Smart, Polished & Career-Ready Bios",

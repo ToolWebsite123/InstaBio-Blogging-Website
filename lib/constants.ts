@@ -1,5 +1,21 @@
 export const ALL_STORIES = [
   {
+    id: 17,
+    tag: "GIRLS STYLE",
+    title: "Instagram Bio Style Girl – Stylish & Trendy Bios",
+    date: "Jun 2, 2026",
+    image: "/images/girl_bio_1.jpeg",
+    slug: "instagram-bio-style-girl",
+  },
+  {
+    id: 16,
+    tag: "CREATIVE BIO",
+    title: "Interesting Bio For Instagram — Unique, Creative & Cool Bios",
+    date: "Jun 2, 2026",
+    image: "/images/girl_bio_2.jpeg",
+    slug: "interesting-bio-for-instagram",
+  },
+  {
     id: 15,
     tag: "AESTHETIC BIO",
     title: "Aesthetic Bio for Instagram for Girl — Soft & Stylish Bios",

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions – Instabio.online | Rules & Guidelines",
   description: "Review the Terms & Conditions of Instabio.online. Learn about content usage rules, intellectual property rights, user conduct, and our legal disclaimers.",
   alternates: {
-    canonical: "/terms",
+    canonical: "/terms/",
   },
 };
 

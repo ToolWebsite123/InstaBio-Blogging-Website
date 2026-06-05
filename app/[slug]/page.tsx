@@ -6,10 +6,9 @@ import BioCard from "@/components/BioCard";
 import BioGrid from "@/components/BioGrid";
 import BioBanner from "@/components/BioBanner";
 import TOC from "@/components/TOC";
-import { format } from "date-fns";
-import { Calendar, Clock } from "lucide-react";
-import Link from "next/link";
+import RelatedPosts from "@/components/RelatedPosts";
 
+const siteUrl = "https://instabio.online";
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
@@ -18,29 +17,35 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  let post;
   try {
-    const resolvedParams = await params;
-    const post = getPostBySlug(resolvedParams.slug);
-    const seoTitle = post.seoTitle || post.title;
-    const seoDescription = post.seoDescription || post.excerpt;
+    post = getPostBySlug(resolvedParams.slug);
+  } catch {
+    notFound();
+  }
 
-    return {
+  const seoTitle = post.seoTitle || post.title;
+  const seoDescription = post.seoDescription || post.excerpt;
+  const pageUrl = `${siteUrl}/${resolvedParams.slug}/`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
+
+  return {
+    title: seoTitle,
+    description: seoDescription,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
       title: seoTitle,
       description: seoDescription,
-      alternates: {
-        canonical: `/${resolvedParams.slug}`,
-      },
-      openGraph: {
-        title: post.title,
-        description: post.excerpt,
-        images: [{ url: post.image }],
-      },
-    };
-  } catch {
-    return {
-      title: "Post Not Found",
-    };
-  }
+      url: pageUrl,
+      siteName: "Instabio.online",
+      locale: "en_US",
+      type: "article",
+      images: [{ url: imageUrl }],
+    },
+  };
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
@@ -51,6 +56,62 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   } catch {
     notFound();
   }
+
+  const pageUrl = `${siteUrl}/${post.slug}/`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
+
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.seoTitle || post.title,
+    description: post.seoDescription || post.excerpt,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    image: imageUrl,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Instabio.online",
+      url: `${siteUrl}/`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Instabio.online",
+      url: `${siteUrl}/`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/icon.svg`,
+      },
+    },
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.seoTitle || post.title,
+        item: pageUrl,
+      },
+    ],
+  };
+
+  const jsonLd = [articleLd, breadcrumbLd];
 
   const components = {
     h2: ({ children, ...props }: any) => {
@@ -91,10 +152,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     ),
   };
 
-  const relatedPosts = getAllPosts().filter(p => p.slug !== post.slug).slice(0, 3);
-
   return (
     <article className="min-h-screen bg-white w-full min-w-0 overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* Header Section */}
       <header className="w-full bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-16 md:pb-16 px-4 sm:px-6">
@@ -112,6 +175,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           prose-ul:list-none prose-ul:pl-0 
           prose-a:text-[#D62976] prose-a:no-underline hover:prose-a:underline">
           <MDXRemote source={post.content} components={components} />
+          <RelatedPosts currentSlug={post.slug} />
         </div>
 
       </main>

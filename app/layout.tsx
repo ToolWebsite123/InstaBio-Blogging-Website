@@ -19,9 +19,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://instabio.online'),
   title: "Instabio.online | Best Instagram Bio Ideas, Captions & Quotes",
   description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabio.online",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Instabio.online | Best Instagram Bio Ideas, Captions & Quotes",
     description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabio.online",

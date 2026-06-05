@@ -7,13 +7,20 @@ const ROOT = path.join(__dirname, "..");
 const POSTS_DIR = path.join(ROOT, "content", "posts");
 const OUTPUT = path.join(ROOT, "public", "sitemap.xml");
 
+const today = new Date().toISOString().split("T")[0];
+
+function pageUrl(path) {
+  if (path === "/") return `${BASE_URL}/`;
+  return `${BASE_URL}${path.endsWith("/") ? path : `${path}/`}`;
+}
+
 const STATIC_PAGES = [
-  { loc: BASE_URL, priority: "1.0", lastmod: "2026-05-28" },
-  { loc: `${BASE_URL}/blog`, priority: "0.8", lastmod: "2026-05-28" },
-  { loc: `${BASE_URL}/about`, priority: "0.8", lastmod: "2026-05-28" },
-  { loc: `${BASE_URL}/contact`, priority: "0.8", lastmod: "2026-05-28" },
-  { loc: `${BASE_URL}/privacy`, priority: "0.8", lastmod: "2026-05-28" },
-  { loc: `${BASE_URL}/terms`, priority: "0.8", lastmod: "2026-05-28" },
+  { loc: pageUrl("/"), priority: "1.0", lastmod: today },
+  { loc: pageUrl("/blog"), priority: "0.5", lastmod: today },
+  { loc: pageUrl("/about"), priority: "0.5", lastmod: today },
+  { loc: pageUrl("/contact"), priority: "0.5", lastmod: today },
+  { loc: pageUrl("/privacy"), priority: "0.3", lastmod: today },
+  { loc: pageUrl("/terms"), priority: "0.3", lastmod: today },
 ];
 
 function escapeXml(value) {
@@ -26,9 +33,9 @@ function escapeXml(value) {
 }
 
 function toLastmod(date) {
-  if (!date) return "2026-05-28";
+  if (!date) return today;
   const parsed = new Date(date);
-  if (Number.isNaN(parsed.getTime())) return "2026-05-28";
+  if (Number.isNaN(parsed.getTime())) return today;
   return parsed.toISOString().split("T")[0];
 }
 
@@ -45,8 +52,8 @@ function getBlogEntries() {
       const source = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
       const { data } = matter(source);
       return {
-        loc: `${BASE_URL}/${slug}`,
-        priority: "0.8",
+        loc: pageUrl(`/${slug}`),
+        priority: "0.9",
         lastmod: toLastmod(data.date),
       };
     })

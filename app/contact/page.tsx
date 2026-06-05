@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Contact Us – Instabio.online",
   description: "Thanks for visiting Instabio.online! Got questions, suggestions or collaboration ideas? Our team is always ready to help.",
   alternates: {
-    canonical: "/contact",
+    canonical: "/contact/",
   },
 };
 

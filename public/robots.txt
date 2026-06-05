@@ -58,6 +58,9 @@ Disallow: /
 
 # END Cloudflare Managed Content
 
+User-agent: Googlebot
+Allow: /
+
 User-Agent: *
 Allow: /
 Disallow: /cgi-bin/

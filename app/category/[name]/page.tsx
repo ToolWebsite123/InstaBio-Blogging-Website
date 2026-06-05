@@ -16,6 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ name: str
   return {
     title: `${formatted} — Instagram Bios`,
     description: `Browse the best ${formatted} Instagram bios.`,
+    alternates: {
+      canonical: `/category/${name}/`,
+    },
   };
 }
 

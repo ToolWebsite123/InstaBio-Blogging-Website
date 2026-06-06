@@ -81,15 +81,27 @@ export default function Navbar() {
 
         <nav className="hidden lg:flex items-center justify-end gap-4 xl:gap-6 flex-1 min-w-0 ml-4">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              title={link.name}
-              className="text-xs xl:text-sm font-semibold text-[#262626] hover:text-[#D62976] transition-all duration-300 relative group whitespace-nowrap"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[linear-gradient(90deg,#4F5BD5,#D62976)] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            link.name === "Instagram Blog" ? (
+              <a
+                key={link.name}
+                href={link.href}
+                title={link.name}
+                className="text-xs xl:text-sm font-semibold text-[#262626] hover:text-[#D62976] transition-all duration-300 relative group whitespace-nowrap"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[linear-gradient(90deg,#4F5BD5,#D62976)] transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href}
+                title={link.name}
+                className="text-xs xl:text-sm font-semibold text-[#262626] hover:text-[#D62976] transition-all duration-300 relative group whitespace-nowrap"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[linear-gradient(90deg,#4F5BD5,#D62976)] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            )
           ))}
         </nav>
 
@@ -128,14 +140,25 @@ export default function Navbar() {
             </div>
             <nav className="flex flex-col flex-1 overflow-y-auto overscroll-contain px-4 sm:px-6 py-4 gap-2 bg-white">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="block rounded-xl border border-gray-100 bg-gray-50 px-4 py-3.5 text-[15px] sm:text-base font-semibold text-[#262626] active:text-[#D62976] active:border-[#D62976]/30 active:bg-[#FFF5F8] break-words leading-snug"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
+                link.name === "Instagram Blog" ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="block rounded-xl border border-gray-100 bg-gray-50 px-4 py-3.5 text-[15px] sm:text-base font-semibold text-[#262626] active:text-[#D62976] active:border-[#D62976]/30 active:bg-[#FFF5F8] break-words leading-snug"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="block rounded-xl border border-gray-100 bg-gray-50 px-4 py-3.5 text-[15px] sm:text-base font-semibold text-[#262626] active:text-[#D62976] active:border-[#D62976]/30 active:bg-[#FFF5F8] break-words leading-snug"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                )
               ))}
             </nav>
           </div>,

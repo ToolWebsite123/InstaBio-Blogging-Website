@@ -33,7 +33,7 @@ export default function HTMLBannerImage({
   const hostRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.5);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!src || !src.endsWith(".html")) return;
     
     const host = hostRef.current;

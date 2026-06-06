@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import HTMLBannerImage from "@/components/HTMLBannerImage";
 import type { Post } from "@/lib/mdx";
 
 export default function LatestGrid({ posts }: { posts: Post[] }) {
@@ -22,7 +22,7 @@ export default function LatestGrid({ posts }: { posts: Post[] }) {
                 >
                   <div className="space-y-5">
                     <div className="relative aspect-[3/2] overflow-hidden rounded bg-muted shrink-0">
-                      <Image 
+                      <HTMLBannerImage 
                         src={post.image} 
                         alt={post.title} 
                         fill 

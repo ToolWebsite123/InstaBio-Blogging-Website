@@ -36,13 +36,16 @@ export function getPostBySlug(slug: string): Post {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
+  const bannerMatch = content.match(/<BioBanner\s+src="([^"]+)"/);
+  const bannerSrc = bannerMatch ? bannerMatch[1] : null;
+
   return {
     slug: realSlug,
     title: data.title,
     excerpt: data.excerpt || data.description || "",
     date: data.date,
     category: data.category,
-    image: data.image || "/images/placeholder.jpg",
+    image: bannerSrc || data.image || "/images/placeholder.jpg",
     readTime: data.readTime || "3 min read",
     seoTitle: data.seoTitle,
     seoDescription: data.seoDescription,

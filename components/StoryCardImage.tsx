@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HTMLBannerImage from "@/components/HTMLBannerImage";
 
 /** Same 16:10 crop on all screen sizes — matches desktop story cards. */
 export const STORY_CARD_ASPECT_CLASS = "aspect-[16/10]";
@@ -31,7 +31,7 @@ export default function StoryCardImage({
     <div
       className={`story-card-image relative w-full ${aspectClass} overflow-hidden bg-gray-100 shrink-0 ${className}`}
     >
-      <Image
+      <HTMLBannerImage
         src={src}
         alt={alt}
         fill

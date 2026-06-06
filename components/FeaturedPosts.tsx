@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import HTMLBannerImage from "@/components/HTMLBannerImage";
 import type { Post } from "@/lib/mdx";
 
 export default function FeaturedPosts({ posts }: { posts: Post[] }) {
@@ -18,7 +18,7 @@ export default function FeaturedPosts({ posts }: { posts: Post[] }) {
               className="group space-y-6"
             >
               <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-muted shrink-0">
-                <Image 
+                <HTMLBannerImage 
                   src={post.image} 
                   alt={post.title} 
                   fill 

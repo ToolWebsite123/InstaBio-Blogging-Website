@@ -1,10 +1,26 @@
 export const ALL_STORIES = [
   {
+    id: 19,
+    tag: "MAHAKAL BIO",
+    title: "Best Mahakal Bio For Instagram – Attitude, Stylish & VIP Bios",
+    date: "Jun 6, 2026",
+    image: "/All%20instagram%20bio/Mahakal%20Bio%20For%20Instagram/mahakal-01-mahakal.bhakt.2026.html",
+    slug: "best-mahakal-bio-for-instagram",
+  },
+  {
+    id: 18,
+    tag: "ATTRACTIVE BIO",
+    title: "Attractive Instagram Bio – Magnetic & Eye-Catching Bios",
+    date: "Jun 6, 2026",
+    image: "/All%20instagram%20bio/Attractive%20instagram%20bio/01_Best_Attractive_Instagram_Bio.html",
+    slug: "attractive-instagram-bio",
+  },
+  {
     id: 17,
     tag: "GIRLS STYLE",
     title: "Instagram Bio Style Girl – Stylish & Trendy Bios",
     date: "Jun 2, 2026",
-    image: "/images/girl_bio_1.jpeg",
+    image: "/All%20instagram%20bio/Instagram%20Bio%20Style%20Girl/instagram-profile-1-soul.canvas.html",
     slug: "instagram-bio-style-girl",
   },
   {
@@ -12,7 +28,7 @@ export const ALL_STORIES = [
     tag: "CREATIVE BIO",
     title: "Interesting Bio For Instagram — Unique, Creative & Cool Bios",
     date: "Jun 2, 2026",
-    image: "/images/girl_bio_2.jpeg",
+    image: "/All%20instagram%20bio/Interesing%20bio%20for%20instagram/instagram-profile-3-free.spirit.vibes.html",
     slug: "interesting-bio-for-instagram",
   },
   {
@@ -20,7 +36,7 @@ export const ALL_STORIES = [
     tag: "AESTHETIC BIO",
     title: "Aesthetic Bio for Instagram for Girl — Soft & Stylish Bios",
     date: "May 31, 2026",
-    image: "/images/girl_bio_1.jpeg",
+    image: "/All%20instagram%20bio/Aesthetic%20instgram%20bio%20for%20girls/01_Best_Aesthetic_Bio_Girl_Soft.html",
     slug: "aesthetic-bio-for-instagram-for-girl",
   },
   {
@@ -28,7 +44,7 @@ export const ALL_STORIES = [
     tag: "FUNNY BIO",
     title: "Funny Instagram Bio — Witty, Clever & Hilarious Bios",
     date: "May 31, 2026",
-    image: "/images/boy_bio_3.jpeg",
+    image: "/All%20instagram%20bio/funny%20isstagram%20bio/01_Best_Funny_Instagram_Bio.html",
     slug: "funny-instagram-bio",
   },
   {
@@ -36,7 +52,7 @@ export const ALL_STORIES = [
     tag: "SHORT BIO",
     title: "Short Bio For Instagram — Stylish, Cute & Attitude Bios",
     date: "May 31, 2026",
-    image: "/images/girl_bio_3.jpeg",
+    image: "/All%20instagram%20bio/Short%20Bio%20For%20Instagram/01_Best_Short_Bio_Boys.html",
     slug: "short-bio-for-instagram",
   },
   {
@@ -44,7 +60,7 @@ export const ALL_STORIES = [
     tag: "GANGSTER BIO",
     title: "Best Gangster Bio For Instagram – Attitude, Boys & Copy Paste Bios",
     date: "May 31, 2026",
-    image: "/images/boy_bio_2.jpeg",
+    image: "/All%20instagram%20bio/Gangster%20bio%20for%20instagram/01_Gangster_Bio_Instagram.html",
     slug: "gangster-bio-for-instagram",
   },
   {
@@ -52,7 +68,7 @@ export const ALL_STORIES = [
     tag: "PROFESSIONAL",
     title: "Professional Instagram Bio — 200+ Smart, Polished & Career-Ready Bios",
     date: "May 24, 2026",
-    image: "/images/professional_bio_1.jpeg",
+    image: "/All%20instagram%20bio/professional%20instagram%20bio/pro_banner_02.html",
     slug: "professional-instagram-bio",
   },
   {
@@ -60,7 +76,7 @@ export const ALL_STORIES = [
     tag: "ISLAMIC BIO",
     title: "Best Islamic Bio for Instagram – Stylish, Attitude & VIP Muslim Bios",
     date: "May 24, 2026",
-    image: "/images/islamic_bio_1.jpeg",
+    image: "/All%20instagram%20bio/Islamic%20Bio%20for%20Instagram/islam_banner_01.html",
     slug: "best-islamic-bio-for-instagram",
   },
   {
@@ -68,7 +84,7 @@ export const ALL_STORIES = [
     tag: "SAD BIO",
     title: "Sad Bio For Instagram — 200+ Emotional & Deep Feeling Bios",
     date: "May 24, 2026",
-    image: "/images/sad_bio_1.jpeg",
+    image: "/All%20instagram%20bio/sad%20bio%20for%20instagram/sad_banner_01.html",
     slug: "sad-bio-for-instagram",
   },
   {
@@ -76,7 +92,7 @@ export const ALL_STORIES = [
     tag: "ATTITUDE BIO",
     title: "Bad Boy Attitude Bios That Demand Respect",
     date: "May 18, 2026",
-    image: "/images/boy_bio_1.jpeg",
+    image: "/All%20instagram%20bio/Instagram%20Bio%20for%20Boys/boys_banner_01.html",
     slug: "best-instagram-bio-for-boys",
   },
   {
@@ -84,7 +100,7 @@ export const ALL_STORIES = [
     tag: "LOVE BIO",
     title: "Best Love Bio for Instagram – Heart Touching & Romantic Bios",
     date: "May 15, 2026",
-    image: "/images/romanticlove_bio_1.jpeg",
+    image: "/All%20instagram%20bio/love%20bio%20for%20instagram/01_Love_Bio_2026.html",
     slug: "best-love-bio-for-instagram",
   },
   {
@@ -92,7 +108,7 @@ export const ALL_STORIES = [
     tag: "GIRLS BIO",
     title: "Best Instagram Bio for Girls – Stylish, Attitude & Cute VIP Bios",
     date: "May 12, 2026",
-    image: "/images/girl_bio_1.jpeg",
+    image: "/All%20instagram%20bio/instagram%20bio%20or%20girls/banner_01.html",
     slug: "best-instagram-bio-for-girls",
   },
   {
@@ -100,7 +116,7 @@ export const ALL_STORIES = [
     tag: "GYM BIO",
     title: "Gym Bio for Instagram – Fitness, Attitude & Stylish Bios",
     date: "May 24, 2026",
-    image: "/images/gym_bio_1.jpeg",
+    image: "/All%20instagram%20bio/Gym%20bio%20for%20instagram/gym_banner_01.html",
     slug: "gym-bio-for-instagram",
   },
   {
@@ -108,7 +124,7 @@ export const ALL_STORIES = [
     tag: "GAMING BIO",
     title: "Best Free Fire Bio for Instagram – Stylish, Attitude & Gaming Bios",
     date: "May 24, 2026",
-    image: "/images/freefire_bio_1.jpeg",
+    image: "/All%20instagram%20bio/free%20fire%20instagram%20bio/ff_banner_01.html",
     slug: "best-free-fire-bio-for-instagram",
   },
 ];

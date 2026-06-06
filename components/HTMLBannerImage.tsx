@@ -34,7 +34,7 @@ export default function HTMLBannerImage({
   const [scale, setScale] = useState(0.5);
 
   useLayoutEffect(() => {
-    if (!src.endsWith(".html")) return;
+    if (!src || !src.endsWith(".html")) return;
     
     const host = hostRef.current;
     if (!host) return;
@@ -62,7 +62,7 @@ export default function HTMLBannerImage({
     };
   }, [src]);
 
-  if (src.endsWith(".html")) {
+  if (src && src.endsWith(".html")) {
     return (
       <div 
         ref={hostRef}

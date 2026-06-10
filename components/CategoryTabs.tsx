@@ -1,12 +1,14 @@
 import Link from "next/link";
 
 const categories = [
+  { name: "Birthday Bio", href: "/birthday-bio-for-instagram" },
   { name: "Boys Bio", href: "/best-instagram-bio-for-boys" },
   { name: "Girls Bio", href: "/best-instagram-bio-for-girls" },
   { name: "Love Bio", href: "/best-love-bio-for-instagram" },
   { name: "Attitude Bio", href: "/best-instagram-bio-for-boys" },
-  { name: "VIP Bio", href: "/best-instagram-bio-for-boys" },
+  { name: "VIP Bio", href: "/vip-instagram-bio" },
   { name: "Gaming Bio", href: "/best-free-fire-bio-for-instagram" },
+  { name: "Cool Bio", href: "/cool-bio-for-instagram" },
 ];
 
 export default function CategoryTabs() {

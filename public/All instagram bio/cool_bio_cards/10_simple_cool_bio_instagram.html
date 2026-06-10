@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{width:680px;height:380px;overflow:hidden;font-family:'Segoe UI',system-ui,sans-serif;}
+.bg{
+  width:680px;height:380px;
+  background:linear-gradient(135deg,#0c1220,#1a365d,#0c1220);
+  position:relative;display:flex;flex-direction:column;
+  align-items:center;justify-content:space-between;
+  padding:9px 36px 7px;
+}
+.glow1{position:absolute;top:-70px;left:-70px;width:230px;height:230px;border-radius:50%;background:#60a5fa;opacity:0.08;filter:blur(48px);pointer-events:none;}
+.glow2{position:absolute;bottom:-70px;right:-70px;width:260px;height:260px;border-radius:50%;background:#93c5fd;opacity:0.06;filter:blur(52px);pointer-events:none;}
+.geo-line{position:absolute;top:0;right:90px;width:1px;height:100%;background:linear-gradient(to bottom,transparent,#60a5fa,transparent);opacity:0.1;pointer-events:none;}
+.head-wrap{text-align:center;z-index:2;padding-top:0px;}
+.headline{color:#fff;font-size:20px;font-weight:900;text-shadow:0 2px 14px rgba(0,0,0,0.6);letter-spacing:-0.4px;line-height:1.2;}
+.subtitle{color:#93c5fd;font-size:11.5px;font-weight:700;margin-top:3px;letter-spacing:0.3px;text-shadow:0 1px 8px rgba(0,0,0,0.5);}
+.card{background:#fff;border-radius:18px;width:608px;box-shadow:0 16px 50px rgba(0,0,0,0.42);overflow:hidden;z-index:2;border:1px solid rgba(255,255,255,0.06);}
+.card-top{display:flex;align-items:center;padding:12px 15px 10px;gap:13px;background:#fff;border-bottom:1.5px solid #f0f0f0;}
+.av-outer{flex-shrink:0;width:80px;height:80px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#0c1220,#1a365d,#0c1220);box-shadow:0 4px 18px rgba(0,0,0,0.35);}
+.av-inner{width:74px;height:74px;border-radius:50%;overflow:hidden;border:2.5px solid #fff;}
+.av-inner img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+.mid-col{display:flex;flex-direction:column;gap:4px;flex-shrink:0;}
+.uname{font-size:13px;font-weight:800;color:#111;letter-spacing:-0.2px;}
+.badge-pill{display:inline-block;background:linear-gradient(135deg,#0c1220,#1a365d,#0c1220);color:#fff;font-size:9.5px;font-weight:700;padding:2px 10px;border-radius:20px;width:fit-content;}
+.right-col{flex:1;display:flex;flex-direction:column;gap:8px;}
+.stats-row{display:flex;gap:16px;justify-content:center;}
+.stat{text-align:center;}
+.snum{font-size:16px;font-weight:800;color:#111;}
+.slabel{font-size:9.5px;color:#888;margin-top:1px;}
+.btn-row{display:flex;gap:7px;}
+.edit-btn{background:#fff;border:1.5px solid #dbdbdb;border-radius:8px;padding:5px 13px;font-size:11px;font-weight:600;color:#111;}
+.follow-btn{background:#60a5fa;border:none;border-radius:8px;padding:5px 12px;font-size:11px;font-weight:700;color:#fff;}
+.ig-badge{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0c1220,#1a365d,#0c1220);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
+.bio-area{padding:9px 16px 9px;background:#fff;}
+.site-link{font-size:10.5px;font-weight:700;color:#60a5fa;margin-bottom:4px;display:block;}
+.domain-bar{text-align:center;z-index:2;display:flex;align-items:center;justify-content:center;gap:8px;}
+.domain{color:rgba(255,255,255,0.72);font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+.dpill{background:#60a5fa;color:#000;font-size:9px;font-weight:800;padding:2px 8px;border-radius:10px;}
+</style>
+</head>
+<body>
+<div class="bg">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="geo-line"></div>
+  <div class="head-wrap">
+    <div class="headline">🌱 Simple Cool Bio</div>
+    <div class="subtitle">😎 🌱 Simple Cool Bio</div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
+        <div class="av-outer"><div class="av-inner"><img src="data:image/png;base64,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" alt="DP"></div></div>
+        <div class="badge-pill">😎 Cool Bio</div>
+      </div>
+      <div class="mid-col" style="flex:1;padding-left:4px;">
+        <div class="uname">simple.cool.life</div>
+        <div class="stats-row">
+          <div class="stat"><div class="snum">112</div><div class="slabel">Posts</div></div>
+          <div class="stat"><div class="snum">4.3K</div><div class="slabel">Followers</div></div>
+          <div class="stat"><div class="snum">381</div><div class="slabel">Following</div></div>
+        </div>
+        <div class="btn-row">
+          <button class="edit-btn">Edit Profile</button>
+          <button class="follow-btn">Follow</button>
+        </div>
+      </div>
+      <div class="ig-badge">
+        <svg width="27" height="27" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="6" stroke="white" stroke-width="2.2"/>
+          <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2.2"/>
+          <circle cx="17.5" cy="6.5" r="1.3" fill="white"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bio-area">
+      <span class="site-link">🔗 instabio.online</span>
+      <div style="font-size:13px;font-weight:700;color:#111;opacity:1;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Simple Vibes, Genuine Connections, Good Energy</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.94;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Family First — Everything Else Second</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.88;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Peaceful Soul On A Purposeful Journey</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.82;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Old Tracks And New Chapters 🎶</div><div style="font-size:12.2px;font-weight:500;color:#111;opacity:0.76;padding:2.6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Grateful For Every Year Since 25 June 🎂</div>
+    </div>
+  </div>
+  <div class="domain-bar">
+    <span class="domain">instabio.online</span>
+    <span class="dpill">2026</span>
+  </div>
+</div>
+</body>
+</html>

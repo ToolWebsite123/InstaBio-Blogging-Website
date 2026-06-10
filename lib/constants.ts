@@ -1,5 +1,13 @@
 export const ALL_STORIES = [
   {
+    id: 20,
+    tag: "BIRTHDAY BIO",
+    title: "Best Birthday Bio for Instagram 2026 – Cute & Funny",
+    date: "Jun 10, 2026",
+    image: "/All%20instagram%20bio/birthday%20instagram%20bio/01_birthday_bio_2026.html",
+    slug: "birthday-bio-for-instagram",
+  },
+  {
     id: 19,
     tag: "MAHAKAL BIO",
     title: "Best Mahakal Bio For Instagram – Attitude, Stylish & VIP Bios",
@@ -126,5 +134,21 @@ export const ALL_STORIES = [
     date: "May 24, 2026",
     image: "/All%20instagram%20bio/free%20fire%20instagram%20bio/ff_banner_01.html",
     slug: "best-free-fire-bio-for-instagram",
+  },
+  {
+    id: 21,
+    tag: "VIP BIO",
+    title: "Best VIP Instagram Bio – Stylish & Royal Bios (2026)",
+    date: "Jun 10, 2026",
+    image: "/All%20instagram%20bio/Best%20instagram%20VIP%20%20bio/01_best_instagram_vip_bio_stylish_font_2026.html",
+    slug: "vip-instagram-bio",
+  },
+  {
+    id: 22,
+    tag: "COOL BIO",
+    title: "Cool Bio for Instagram 2026 – Savage & Unique Bios",
+    date: "Jun 10, 2026",
+    image: "/All%20instagram%20bio/cool_bio_cards/01_cool_bio_instagram_2026.html",
+    slug: "cool-bio-for-instagram",
   },
 ];

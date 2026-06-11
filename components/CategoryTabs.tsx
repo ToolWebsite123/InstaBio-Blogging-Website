@@ -9,6 +9,9 @@ const categories = [
   { name: "VIP Bio", href: "/vip-instagram-bio" },
   { name: "Gaming Bio", href: "/best-free-fire-bio-for-instagram" },
   { name: "Cool Bio", href: "/cool-bio-for-instagram" },
+  { name: "Sigma Bio", href: "/sigma-bio-for-instagram" },
+  { name: "Cute Bio", href: "/cute-instagram-bio" },
+  { name: "Best Bio", href: "/best-instagram-bio" },
 ];
 
 export default function CategoryTabs() {

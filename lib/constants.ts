@@ -1,5 +1,13 @@
 export const ALL_STORIES = [
   {
+    id: 23,
+    tag: "SIGMA BIO",
+    title: "Best Sigma Bio for Instagram 2026 – Lone Wolf Vibes",
+    date: "Jun 11, 2026",
+    image: "/All%20instagram%20bio/Sigma%20instagram%20bio/01_best_sigma_bio_2026.html",
+    slug: "sigma-bio-for-instagram",
+  },
+  {
     id: 20,
     tag: "BIRTHDAY BIO",
     title: "Best Birthday Bio for Instagram 2026 – Cute & Funny",
@@ -50,9 +58,9 @@ export const ALL_STORIES = [
   {
     id: 14,
     tag: "FUNNY BIO",
-    title: "Funny Instagram Bio — Witty, Clever & Hilarious Bios",
-    date: "May 31, 2026",
-    image: "/All%20instagram%20bio/funny%20isstagram%20bio/01_Best_Funny_Instagram_Bio.html",
+    title: "Funny Instagram Bios 2026 – Hilarious Bios That Hit",
+    date: "Jun 11, 2026",
+    image: "/All%20instagram%20bio/funny%20insta%20bio/01_funny_bio_boys.html",
     slug: "funny-instagram-bio",
   },
   {
@@ -151,4 +159,20 @@ export const ALL_STORIES = [
     image: "/All%20instagram%20bio/cool_bio_cards/01_cool_bio_instagram_2026.html",
     slug: "cool-bio-for-instagram",
   },
+  {
+    id: 24,
+    tag: "CUTE BIO",
+    title: "Cute Instagram Bios 2026 – Adorable & Sweet Bio Ideas",
+    date: "Jun 11, 2026",
+    image: "/All%20instagram%20bio/cute_bio_cards/01_cute_instagram_bios_2026.html",
+    slug: "cute-instagram-bio",
+  },
+  {
+    id: 25,
+    tag: "BEST BIO",
+    title: "999+ Best Bios for Instagram 2026 – All Styles Here",
+    date: "Jun 11, 2026",
+    image: "/All%20instagram%20bio/best_bio_cards/01_instagram_bio_boys_2026.html",
+    slug: "best-instagram-bio",
+  }
 ];

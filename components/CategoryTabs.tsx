@@ -12,6 +12,13 @@ const categories = [
   { name: "Sigma Bio", href: "/sigma-bio-for-instagram" },
   { name: "Cute Bio", href: "/cute-instagram-bio" },
   { name: "Best Bio", href: "/best-instagram-bio" },
+  { name: "Classy Bio", href: "/classy-instagram-bio" },
+  { name: "Emotional Bio", href: "/emotional-instagram-bio" },
+  { name: "Great Bio", href: "/great-instagram-bio" },
+  { name: "Bio Captions", href: "/instagram-bio-captions" },
+  { name: "Bio Inspiration", href: "/instagram-bio-inspiration" },
+  { name: "King & Queen Bio", href: "/king-and-queen-bio" },
+  { name: "Photography Bio", href: "/photography-instagram-bio" },
 ];
 
 export default function CategoryTabs() {

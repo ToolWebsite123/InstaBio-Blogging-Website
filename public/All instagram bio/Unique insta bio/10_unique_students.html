@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 - Unique Bio for Students | instabio.online</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f2f2f2; min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; padding: 24px; }
+  .card { width: 660px; background: #ffffff; border-radius: 0px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  
+  /* Top nav bar */
+  .top-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #efefef; }
+  .top-back { font-size: 22px; color: #262626; cursor: pointer; line-height: 1; }
+  .top-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 16px; color: #262626; letter-spacing: -0.3px; }
+  .top-icons { display: flex; gap: 16px; font-size: 20px; color: #262626; cursor: pointer; }
+  
+  /* Profile section */
+  .profile-section { padding: 16px 16px 12px 16px; }
+  .profile-row { display: flex; align-items: center; gap: 28px; margin-bottom: 10px; }
+  
+  /* DP with gradient ring */
+  .dp-ring { width: 92px; height: 92px; border-radius: 50%; padding: 3px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); flex-shrink: 0; }
+  .dp-inner { width: 100%; height: 100%; border-radius: 50%; border: 3px solid #fff; overflow: hidden; background: #ccc; }
+  .dp-inner img { width: 100%; height: 100%; object-fit: cover; }
+  
+  /* Stats */
+  .stats { display: flex; gap: 24px; flex: 1; justify-content: center; }
+  .stat-item { text-align: center; }
+  .stat-num { font-weight: 700; font-size: 17px; color: #262626; line-height: 1.2; }
+  .stat-label { font-size: 13px; color: #737373; margin-top: 2px; }
+  
+  /* Profile name & info */
+  .profile-name { font-weight: 600; font-size: 14px; color: #262626; margin-bottom: 8px; }
+  
+  /* Pill tag */
+  .pill-tag { display: inline-flex; align-items: center; gap: 5px; background: #0284c7; color: #fff; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 8px; }
+  
+  /* Website */
+  .website-row { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; font-size: 13px; color: #737373; }
+  .website-row a { color: #0095f6; text-decoration: none; font-weight: 500; }
+  .website-row a:hover { text-decoration: underline; }
+  
+  /* Bio lines */
+  .bio-block { margin-bottom: 0; }
+  .bio-line { font-size: 13px; line-height: 1.55; color: #262626; padding: 1px 0; }
+  .bio-line.caps { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 0.3px; text-transform: uppercase; color: #1a1a1a; }
+  .bio-line.italic { font-style: italic; color: #4a4a4a; }
+  
+  /* Action buttons */
+  .btn-row { display: flex; gap: 8px; margin-top: 14px; padding: 0 16px 16px 16px; }
+  .btn-edit { flex: 1; background: #efefef; color: #262626; border: none; border-radius: 8px; padding: 8px 0; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; }
+  .btn-follow { flex: 1; background: #0095f6; color: #fff; border: none; border-radius: 8px; padding: 8px 0; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; }
+  .btn-chevron { background: #efefef; color: #262626; border: none; border-radius: 8px; padding: 8px 12px; font-size: 16px; cursor: pointer; font-weight: 600; }
+  
+  /* Category label at bottom */
+  .category-footer { background: #f9f9f9; border-top: 1px solid #efefef; padding: 8px 16px; font-size: 11px; color: #aaa; text-align: center; letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <!-- Top navigation bar -->
+  <div class="top-bar">
+    <span class="top-back">‹</span>
+    <span class="top-brand">instabio.online</span>
+    <div class="top-icons"><span>＋</span><span>☰</span></div>
+  </div>
+  
+  <!-- Profile section -->
+  <div class="profile-section">
+    <!-- Profile row: DP + Stats -->
+    <div class="profile-row">
+      <div class="dp-ring">
+        <div class="dp-inner">
+          <img src="data:image/png;base64,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" alt="Profile Picture">
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Posts</div></div>
+        <div class="stat-item"><div class="stat-num">12k</div><div class="stat-label">Followers</div></div>
+        <div class="stat-item"><div class="stat-num">2k</div><div class="stat-label">Following</div></div>
+      </div>
+    </div>
+    
+    <!-- Profile name -->
+    <div class="profile-name">instabio.online</div>
+    
+    <!-- Pill tag -->
+    <div><span class="pill-tag">📚 Students</span></div>
+    
+    <!-- Website -->
+    <div class="website-row">🌐 <a href="https://instabio.online/" target="_blank">instabio.online</a></div>
+    
+    <!-- Bio lines -->
+    <div class="bio-block">
+<div class="bio-line caps">📚 UNIQUE STUDENT — STUDYING STANDARD CURRICULUM, BUILDING ORIGINAL FUTURE</div>
+<div class="bio-line caps">💡 ORIGINAL APPROACH TO LEARNING — SAME CLASSES, DIFFERENT CONCLUSIONS</div>
+<div class="bio-line caps">🎯 SHOWS UP TO SAME LECTURE AND HEARS SOMETHING DIFFERENT EVERY TIME</div>
+<div class="bio-line italic">✨ Different in the way all the best students are — curious about what comes after the answer 🌟</div>
+<div class="bio-line italic">😎 Original student in a room full of people taking identical notes on identical futures 🎂</div>
+    </div>
+  </div>
+  
+  <!-- Action buttons -->
+  <div class="btn-row">
+    <button class="btn-edit">Edit Profile</button>
+    <button class="btn-follow">Follow</button>
+    <button class="btn-chevron">›</button>
+  </div>
+  
+  <!-- Footer -->
+  <div class="category-footer">10 · UNIQUE BIO FOR STUDENTS · INSTABIO.ONLINE</div>
+</div>
+</body>
+</html>

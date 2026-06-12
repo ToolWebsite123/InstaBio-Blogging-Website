@@ -19,6 +19,7 @@ const categories = [
   { name: "Bio Inspiration", href: "/instagram-bio-inspiration" },
   { name: "King & Queen Bio", href: "/king-and-queen-bio" },
   { name: "Photography Bio", href: "/photography-instagram-bio" },
+  { name: "Unique Bio", href: "/unique-bio-for-instagram" },
 ];
 
 export default function CategoryTabs() {

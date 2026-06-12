@@ -230,5 +230,13 @@ export const ALL_STORIES = [
     date: "Jun 12, 2026",
     image: "/All%20instagram%20bio/photography%20insta%20bio/01_photography_bio_2026.html",
     slug: "photography-instagram-bio",
+  },
+  {
+    id: 33,
+    tag: "UNIQUE BIO",
+    title: "Unique Bio for Instagram 2026 – Creative & Original",
+    date: "Jun 12, 2026",
+    image: "/All%20instagram%20bio/Unique%20insta%20bio/01_unique_bio_2026.html",
+    slug: "unique-bio-for-instagram",
   }
 ];

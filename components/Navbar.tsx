@@ -71,7 +71,7 @@ export default function Navbar() {
           <Logo size={32} className="shrink-0 w-8 h-8 sm:w-9 sm:h-9" />
           <span className="min-w-0 text-base sm:text-xl md:text-2xl font-black tracking-tighter truncate">
             <span className="sm:hidden bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">
-              Instabio
+              Instabiogen
             </span>
             <span className="hidden sm:inline bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">
               Instabiogen.online

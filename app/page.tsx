@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import BioGeneratorSection from "@/components/BioGeneratorSection";
-import FeaturedStories from "@/components/FeaturedStories";
-import LatestStories from "@/components/LatestStories";
 
 const siteUrl = "https://instabio.online";
 
@@ -54,8 +52,6 @@ export default function Home() {
       />
       <HeroSection />
       <BioGeneratorSection />
-      <FeaturedStories />
-      <LatestStories />
     </div>
   );
 }

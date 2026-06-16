@@ -10,8 +10,8 @@ const OUTPUT = path.join(ROOT, "public", "sitemap.xml");
 const today = new Date().toISOString().split("T")[0];
 
 function pageUrl(path) {
-  if (path === "/") return `${BASE_URL}/`;
-  return `${BASE_URL}${path.endsWith("/") ? path : `${path}/`}`;
+  if (path === "/") return BASE_URL;
+  return `${BASE_URL}${path.endsWith("/") ? path.slice(0, -1) : path}`;
 }
 
 const STATIC_PAGES = [

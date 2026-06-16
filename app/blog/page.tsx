@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Blog - Instabiogen.online",
   description: "Browse our latest collection of Instagram bios, captions and quotes.",
   alternates: {
-    canonical: "/blog/",
+    canonical: "/blog",
   },
 };
 

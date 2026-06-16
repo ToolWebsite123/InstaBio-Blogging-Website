@@ -2,7 +2,7 @@
 const nextConfig = {
   devIndicators: false,  // ✅ ye line add ki
   output: 'export',
-  trailingSlash: true,
+  trailingSlash: false,
   eslint: {
     ignoreDuringBuilds: true,
   },

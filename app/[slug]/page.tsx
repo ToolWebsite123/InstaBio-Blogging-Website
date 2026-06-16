@@ -8,7 +8,7 @@ import BioBanner from "@/components/BioBanner";
 import TOC from "@/components/TOC";
 import RelatedPosts from "@/components/RelatedPosts";
 
-const siteUrl = "https://instabio.online";
+const siteUrl = "https://instabiogen.online";
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: seoTitle,
       description: seoDescription,
       url: pageUrl,
-      siteName: "Instabio.online",
+      siteName: "Instabiogen.online",
       locale: "en_US",
       type: "article",
       images: [{ url: imageUrl }],
@@ -72,12 +72,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     dateModified: post.date,
     author: {
       "@type": "Organization",
-      name: "Instabio.online",
+      name: "Instabiogen.online",
       url: `${siteUrl}/`,
     },
     publisher: {
       "@type": "Organization",
-      name: "Instabio.online",
+      name: "Instabiogen.online",
       url: `${siteUrl}/`,
       logo: {
         "@type": "ImageObject",

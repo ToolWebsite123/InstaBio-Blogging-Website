@@ -28,7 +28,7 @@ function parseMahakalHtml(html) {
     html.match(/class="badge"[^>]*>([^<]+)</)?.[1]?.trim() || "🕉️ Shiv Bhakt";
   const biolink =
     html.match(/class="bio-link"[^>]*>([^<]+)</)?.[1]?.trim() ||
-    "🔗 instabio.online";
+    "🔗 instabiogen.online";
   const bioLines = [...html.matchAll(/class="bio-line"[^>]*>([^<]+)</g)].map(
     (m) => m[1].trim()
   );
@@ -64,7 +64,7 @@ function bioLineHtml(line) {
 function buildBanner680(data) {
   const lines = data.bioLines.length
     ? data.bioLines
-    : ["🕉️ Har Har Mahadev — Copy from instabio.online"];
+    : ["🕉️ Har Har Mahadev — Copy from instabiogen.online"];
   const bioHtml = lines.map(bioLineHtml).join("");
   const statsHtml = data.stats
     .map(

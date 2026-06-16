@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-const BASE_URL = "https://instabio.online";
+const BASE_URL = "https://instabiogen.online";
 const ROOT = path.join(__dirname, "..");
 const POSTS_DIR = path.join(ROOT, "content", "posts");
 const OUTPUT = path.join(ROOT, "public", "sitemap.xml");

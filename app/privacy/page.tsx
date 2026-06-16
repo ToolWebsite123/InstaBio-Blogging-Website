@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy – Instabio.online | How We Protect Your Data",
-  description: "Read the Privacy Policy of Instabio.online to understand how we collect, use, and protect your personal information. Your privacy is our priority.",
+  title: "Privacy Policy – Instabiogen.online | How We Protect Your Data",
+  description: "Read the Privacy Policy of Instabiogen.online to understand how we collect, use, and protect your personal information. Your privacy is our priority.",
   alternates: {
     canonical: "/privacy/",
   },
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
           <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
-            Privacy Policy — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
+            Privacy Policy — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabiogen.online</Link>
           </h1>
         </header>
 
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Privacy Policy</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              This Privacy Policy explains how <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabio.online</Link> collects, uses, and protects your personal information when you visit our website. By using our site, you agree to the terms described below.
+              This Privacy Policy explains how <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabiogen.online</Link> collects, uses, and protects your personal information when you visit our website. By using our site, you agree to the terms described below.
             </p>
           </section>
 
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
               </div>
               <h2 className="text-2xl font-bold text-[#262626]">Information We Collect</h2>
             </div>
-            <p className="text-gray-600 mb-6">We may collect the following types of information when you visit <span className="font-bold text-[#262626]">Instabio.online</span>:</p>
+            <p className="text-gray-600 mb-6">We may collect the following types of information when you visit <span className="font-bold text-[#262626]">Instabiogen.online</span>:</p>
             <div className="space-y-3">
               {[
                 { label: "Personal Information:", value: "Such as your name and email address if you voluntarily submit it through our contact form or newsletter subscription." },
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
               </div>
               <h2 className="text-2xl font-bold text-[#262626]">Cookies & Tracking Technologies</h2>
             </div>
-            <p className="text-gray-600 mb-6"><span className="font-bold text-[#262626]">Instabio.online</span> uses cookies and similar tracking technologies to personalize your experience. These may include:</p>
+            <p className="text-gray-600 mb-6"><span className="font-bold text-[#262626]">Instabiogen.online</span> uses cookies and similar tracking technologies to personalize your experience. These may include:</p>
             <div className="space-y-3 mb-6">
               {[
                 { label: "Session Cookies:", value: "Temporary cookies that expire when you close your browser." },
@@ -159,7 +159,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Children&apos;s Privacy</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              <span className="font-bold text-[#262626]">Instabio.online</span> does not knowingly collect personal information from children under the age of 13. If you believe your child has provided us with personal information, please contact us immediately and we will take steps to remove that information.
+              <span className="font-bold text-[#262626]">Instabiogen.online</span> does not knowingly collect personal information from children under the age of 13. If you believe your child has provided us with personal information, please contact us immediately and we will take steps to remove that information.
             </p>
           </section>
 

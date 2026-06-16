@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8 mb-12 md:mb-16">
           <div className="lg:col-span-5 sm:col-span-2">
             <Link href="/" className="text-2xl sm:text-3xl font-black bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] tracking-tighter mb-6 inline-block hover:opacity-80 transition-opacity">
-              Instabio.online
+              Instabiogen.online
             </Link>
             <p className="text-[#8e8e8e] text-base sm:text-lg max-w-md leading-relaxed mb-8">
               Elevate your social presence with the web&apos;s most aesthetic collection of Instagram bios, viral captions, and stylish text.
@@ -45,7 +45,7 @@ export default function Footer() {
 
         <div className="pt-8 md:pt-10 border-t border-gray-50 text-center">
           <p className="text-[#8e8e8e] text-sm font-medium">
-            &copy; {new Date().getFullYear()} <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabio.online</Link>. Crafted for the aesthetic era.
+            &copy; {new Date().getFullYear()} <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabiogen.online</Link>. Crafted for the aesthetic era.
           </p>
         </div>
       </div>

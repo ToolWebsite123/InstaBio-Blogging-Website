@@ -229,7 +229,7 @@ body{width:680px;height:380px;overflow:hidden;font-family:'Segoe UI',system-ui,s
       <div class="uname-row">
         <span class="udot"></span>
         <span>${escapeHtml(data.username)}</span>
-        <span class="site-tag">✦ instabio.online</span>
+        <span class="site-tag">✦ instabiogen.online</span>
       </div>
       ${bioHtml}
     </div>

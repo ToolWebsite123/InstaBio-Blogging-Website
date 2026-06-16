@@ -25,7 +25,7 @@ function parseProfileHtml(html) {
     html.match(/class="badge"[^>]*>([^<]+)</)?.[1]?.trim() || "✨ Bio Ideas";
   const biolink =
     html.match(/class="biolink"[^>]*>([^<]+)</)?.[1]?.trim() ||
-    "🔗 instabio.online";
+    "🔗 instabiogen.online";
   const bioLines = [...html.matchAll(/class="bioline"[^>]*>([^<]+)</g)].map((m) =>
     m[1].trim()
   );
@@ -63,7 +63,7 @@ function bioLineHtml(line) {
 function buildProfileBanner680(data) {
   const lines = data.bioLines.length
     ? data.bioLines
-    : ["✨ Copy your favorite bio from instabio.online"];
+    : ["✨ Copy your favorite bio from instabiogen.online"];
   const bioHtml = lines.map(bioLineHtml).join("");
   const statsHtml = data.stats
     .map(

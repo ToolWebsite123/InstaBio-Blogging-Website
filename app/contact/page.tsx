@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact Us – Instabio.online",
-  description: "Thanks for visiting Instabio.online! Got questions, suggestions or collaboration ideas? Our team is always ready to help.",
+  title: "Contact Us – Instabiogen.online",
+  description: "Thanks for visiting Instabiogen.online! Got questions, suggestions or collaboration ideas? Our team is always ready to help.",
   alternates: {
     canonical: "/contact/",
   },
@@ -17,7 +17,7 @@ export default function ContactPage() {
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
           <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
-            Contact Us — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
+            Contact Us — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabiogen.online</Link>
           </h1>
         </header>
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Email</p>
-                    <a href="mailto:contact@instabio.online" className="text-base sm:text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors break-all">contact@instabio.online</a>
+                    <a href="mailto:contact@instabiogen.online" className="text-base sm:text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors break-all">contact@instabiogen.online</a>
                   </div>
                 </div>
                 
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Website</p>
-                    <Link href="/" className="text-base sm:text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors break-all">https://instabio.online</Link>
+                    <Link href="/" className="text-base sm:text-lg font-bold text-[#262626] hover:text-[#D62976] transition-colors break-all">https://instabiogen.online</Link>
                   </div>
                 </div>
               </div>

@@ -11,7 +11,7 @@ type LogoProps = {
 export default function Logo({
   size = 32,
   className = "",
-  title = "Instabio.online",
+  title = "Instabiogen.online",
 }: LogoProps) {
   const gradId = useId().replace(/:/g, "");
 

@@ -32,4 +32,4 @@ User-agent: *
 Allow: /
 Disallow: /cgi-bin/
 
-Sitemap: https://instabio.online/sitemap.xml
+Sitemap: https://instabiogen.online/sitemap.xml

@@ -16,14 +16,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://instabio.online'),
-  title: "Instabio.online | Best Instagram Bio Ideas, Captions & Quotes",
-  description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabio.online",
+  metadataBase: new URL('https://instabiogen.online'),
+  title: "Instabiogen.online | Best Instagram Bio Ideas, Captions & Quotes",
+  description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabiogen.online",
   openGraph: {
-    title: "Instabio.online | Best Instagram Bio Ideas, Captions & Quotes",
-    description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabio.online",
-    url: "https://instabio.online",
-    siteName: "Instabio.online",
+    title: "Instabiogen.online | Best Instagram Bio Ideas, Captions & Quotes",
+    description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabiogen.online",
+    url: "https://instabiogen.online",
+    siteName: "Instabiogen.online",
     locale: "en_US",
     type: "website",
   },

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions – Instabio.online | Rules & Guidelines",
-  description: "Review the Terms & Conditions of Instabio.online. Learn about content usage rules, intellectual property rights, user conduct, and our legal disclaimers.",
+  title: "Terms & Conditions – Instabiogen.online | Rules & Guidelines",
+  description: "Review the Terms & Conditions of Instabiogen.online. Learn about content usage rules, intellectual property rights, user conduct, and our legal disclaimers.",
   alternates: {
     canonical: "/terms/",
   },
@@ -17,7 +17,7 @@ export default function TermsPage() {
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
           <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
-            Terms & Conditions — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
+            Terms & Conditions — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabiogen.online</Link>
           </h1>
         </header>
 
@@ -33,7 +33,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Terms & Conditions</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              Please read these Terms & Conditions carefully before using <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabio.online</Link>. By accessing or using our website, you agree to be bound by these terms.
+              Please read these Terms & Conditions carefully before using <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabiogen.online</Link>. By accessing or using our website, you agree to be bound by these terms.
             </p>
           </section>
 
@@ -46,7 +46,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Acceptance of Terms</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              By accessing and using <span className="font-bold text-[#262626]">Instabio.online</span>, you accept and agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, please do not use our website.
+              By accessing and using <span className="font-bold text-[#262626]">Instabiogen.online</span>, you accept and agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, please do not use our website.
             </p>
           </section>
 
@@ -58,7 +58,7 @@ export default function TermsPage() {
               </div>
               <h2 className="text-2xl font-bold text-[#262626]">Use of Content</h2>
             </div>
-            <p className="text-gray-600 mb-6">All content published on <span className="font-bold text-[#262626]">Instabio.online</span> — including blog posts, bio templates, captions, articles, and images — is for personal, non-commercial use only.</p>
+            <p className="text-gray-600 mb-6">All content published on <span className="font-bold text-[#262626]">Instabiogen.online</span> — including blog posts, bio templates, captions, articles, and images — is for personal, non-commercial use only.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-2xl border border-green-100">
@@ -88,7 +88,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Intellectual Property</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              All original content, design, and materials on <span className="font-bold text-[#262626]">Instabio.online</span> are the intellectual property of <span className="font-bold text-[#262626]">Instabio.online</span> unless otherwise stated. Unauthorized use of our content may result in legal action.
+              All original content, design, and materials on <span className="font-bold text-[#262626]">Instabiogen.online</span> are the intellectual property of <span className="font-bold text-[#262626]">Instabiogen.online</span> unless otherwise stated. Unauthorized use of our content may result in legal action.
             </p>
           </section>
 
@@ -139,7 +139,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Disclaimer of Warranties</h2>
             </div>
             <p className="text-gray-600 leading-relaxed italic">
-              <span className="font-bold text-[#262626]">Instabio.online</span> is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We make no warranties, expressed or implied, regarding the accuracy, completeness, or reliability of any content on our website. We do not guarantee that our website will be available at all times or free from errors.
+              <span className="font-bold text-[#262626]">Instabiogen.online</span> is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We make no warranties, expressed or implied, regarding the accuracy, completeness, or reliability of any content on our website. We do not guarantee that our website will be available at all times or free from errors.
             </p>
           </section>
 
@@ -152,7 +152,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Limitation of Liability</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To the fullest extent permitted by law, <span className="font-bold text-[#262626]">Instabio.online</span> shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from your use or inability to use our website, even if we have been advised of the possibility of such damages.
+              To the fullest extent permitted by law, <span className="font-bold text-[#262626]">Instabiogen.online</span> shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from your use or inability to use our website, even if we have been advised of the possibility of such damages.
             </p>
           </section>
 
@@ -165,7 +165,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Advertising</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              <span className="font-bold text-[#262626]">Instabio.online</span> may display advertisements provided by third-party ad networks, including Google AdSense. We are not responsible for the content of these advertisements. Clicking on third-party ads may direct you to external websites, and we are not responsible for the content or privacy practices of those sites.
+              <span className="font-bold text-[#262626]">Instabiogen.online</span> may display advertisements provided by third-party ad networks, including Google AdSense. We are not responsible for the content of these advertisements. Clicking on third-party ads may direct you to external websites, and we are not responsible for the content or privacy practices of those sites.
             </p>
           </section>
 
@@ -178,7 +178,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#262626]">Comments & User Submissions</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              If our website allows user comments or submissions, you grant <span className="font-bold text-[#262626]">Instabio.online</span> a non-exclusive, royalty-free license to use, reproduce, and display such content. You are solely responsible for any content you submit and agree that it does not violate any third-party rights or applicable laws.
+              If our website allows user comments or submissions, you grant <span className="font-bold text-[#262626]">Instabiogen.online</span> a non-exclusive, royalty-free license to use, reproduce, and display such content. You are solely responsible for any content you submit and agree that it does not violate any third-party rights or applicable laws.
             </p>
           </section>
 
@@ -218,7 +218,7 @@ export default function TermsPage() {
             </div>
             <p className="text-gray-600 leading-relaxed">
               For questions regarding these Terms & Conditions, please contact us at:{' '}
-              <a href="mailto:contact@instabio.online" className="text-[#D62976] font-bold hover:underline">contact@instabio.online</a>
+              <a href="mailto:contact@instabiogen.online" className="text-[#D62976] font-bold hover:underline">contact@instabiogen.online</a>
             </p>
           </section>
 

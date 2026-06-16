@@ -57,7 +57,7 @@ export default function LatestGrid({ posts }: { posts: Post[] }) {
             {/* Trending */}
             <div className="space-y-8">
               <h2 className="text-xs font-bold uppercase tracking-widest text-foreground border-b border-border pb-4">
-                Popular on Instabio.online
+                Popular on Instabiogen.online
               </h2>
               <div className="space-y-6">
                 {posts.slice(0, 4).map((post, i) => (

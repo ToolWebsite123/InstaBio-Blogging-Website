@@ -4,7 +4,7 @@ import { ALL_STORIES } from "@/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog - Instabio.online",
+  title: "Blog - Instabiogen.online",
   description: "Browse our latest collection of Instagram bios, captions and quotes.",
   alternates: {
     canonical: "/blog/",

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us – Instabio.online | Where Your Instagram Story Begins",
-  description: "We don't just write bios — we craft your first impression. Instabio.online was built for dreamers, creators & go-getters who refuse to be ordinary. Your perfect bio starts here.",
+  title: "About Us – Instabiogen.online | Where Your Instagram Story Begins",
+  description: "We don't just write bios — we craft your first impression. Instabiogen.online was built for dreamers, creators & go-getters who refuse to be ordinary. Your perfect bio starts here.",
   alternates: {
     canonical: "/about/",
   },
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <main className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
           <h1 className="text-3xl md:text-5xl font-black text-[#262626] tracking-tight text-balance break-words">
-            About Us — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabio.online</Link>
+            About Us — <Link href="/" className={`bg-clip-text text-transparent ${brandGradient} hover:opacity-80 transition-opacity`}>Instabiogen.online</Link>
           </h1>
         </header>
 
@@ -26,9 +26,9 @@ export default function AboutPage() {
           
           {/* About Section */}
           <section>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#262626] mb-4 sm:mb-6">About Instabio.online</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#262626] mb-4 sm:mb-6">About Instabiogen.online</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Welcome to <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabio.online</Link> — your go-to destination for creative, inspiring, and ready-to-use Instagram bio ideas, captions, and personal branding tips. We help individuals, influencers, and businesses craft the perfect online identity.
+              Welcome to <Link href="/" className="font-bold text-[#262626] hover:text-[#D62976]">Instabiogen.online</Link> — your go-to destination for creative, inspiring, and ready-to-use Instagram bio ideas, captions, and personal branding tips. We help individuals, influencers, and businesses craft the perfect online identity.
             </p>
           </section>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4">
               <p className="text-gray-600 text-lg leading-relaxed">
-                At <span className="font-bold text-[#262626]">Instabio.online</span>, our mission is simple: help you express yourself online with confidence. Whether you&apos;re building a personal brand, growing a business, or just trying to stand out on social media — we provide the words and ideas that make it happen.
+                At <span className="font-bold text-[#262626]">Instabiogen.online</span>, our mission is simple: help you express yourself online with confidence. Whether you&apos;re building a personal brand, growing a business, or just trying to stand out on social media — we provide the words and ideas that make it happen.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed italic border-l-4 border-[#D62976] pl-6 py-2">
                 We believe a great bio is more than just text. It&apos;s your first impression, your digital handshake, and your story — all in a few short lines. That&apos;s why we work hard to bring you fresh, relevant, and creative content every day.
@@ -80,7 +80,7 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Our Story</h2>
             <div className="space-y-6 relative z-10">
               <p className="text-gray-300 text-lg leading-relaxed">
-                <span className="font-bold text-white">Instabio.online</span> was started by a passionate team of writers and digital creators who were frustrated by the lack of quality bio inspiration online. We saw millions of people struggling to write just 150 characters about themselves — and we knew we could help.
+                <span className="font-bold text-white">Instabiogen.online</span> was started by a passionate team of writers and digital creators who were frustrated by the lack of quality bio inspiration online. We saw millions of people struggling to write just 150 characters about themselves — and we knew we could help.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
                 From a small blog to a growing resource hub, we have expanded our content library to serve users across the globe. Our readers come from Pakistan, India, UAE, UK, USA, and beyond — all united by the desire to present their best selves online.

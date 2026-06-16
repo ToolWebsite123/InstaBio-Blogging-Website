@@ -74,7 +74,7 @@ export default function Navbar() {
               Instabio
             </span>
             <span className="hidden sm:inline bg-clip-text text-transparent bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)]">
-              Instabio.online
+              Instabiogen.online
             </span>
           </span>
         </Link>

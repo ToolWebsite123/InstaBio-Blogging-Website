@@ -19,7 +19,7 @@ export default function CTA() {
         </h2>
         
         <p className="text-xl text-muted-foreground max-w-xl mx-auto">
-          Join 50K+ users who are creating stunning bios and captions with Instabio.online every day.
+          Join 50K+ users who are creating stunning bios and captions with Instabiogen.online every day.
         </p>
 
         <div className="flex justify-center">

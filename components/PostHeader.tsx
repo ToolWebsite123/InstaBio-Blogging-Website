@@ -22,7 +22,7 @@ export default function PostHeader({ title, category, date, readTime }: PostHead
       
       <div className="flex items-center gap-4 py-6 border-y border-border">
         <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-sm text-muted-foreground">
-          <div className="font-medium text-foreground">Instabio.online Editorial</div>
+          <div className="font-medium text-foreground">Instabiogen.online Editorial</div>
           <span className="hidden sm:inline">&middot;</span>
           <div className="flex items-center gap-3">
             <time dateTime={date}>{format(new Date(date), "MMM d, yyyy")}</time>

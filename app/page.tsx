@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import BioGeneratorSection from "@/components/BioGeneratorSection";
 
-const siteUrl = "https://instabio.online";
+const siteUrl = "https://instabiogen.online";
 
 export const metadata: Metadata = {
-  title: "Instabio.online | Best Instagram Bio Ideas, Captions & Quotes",
+  title: "Instabiogen.online | Best Instagram Bio Ideas, Captions & Quotes",
   description:
-    "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabio.online",
+    "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabiogen.online",
   alternates: {
     canonical: "/",
   },
@@ -17,7 +17,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Instabio.online",
+    name: "Instabiogen.online",
     url: `${siteUrl}/`,
     description:
       "Best Instagram bio ideas, captions, and stylish names for boys, girls, and professionals.",
@@ -30,14 +30,14 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Instabio.online",
+    name: "Instabiogen.online",
     url: `${siteUrl}/`,
     logo: `${siteUrl}/icon.svg`,
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Instabio.online | Best Instagram Bio Ideas, Captions & Quotes",
+    name: "Instabiogen.online | Best Instagram Bio Ideas, Captions & Quotes",
     url: `${siteUrl}/`,
     isPartOf: { "@type": "WebSite", url: `${siteUrl}/` },
   },

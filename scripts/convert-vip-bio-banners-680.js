@@ -45,7 +45,7 @@ function parseBannerHtml(html) {
   // Extract username
   const username =
     html.match(/class="username"[^>]*>([^<]+)</)?.[1]?.trim() ||
-    "instabio.online";
+    "instabiogen.online";
 
   return {
     headline: badgeText,
@@ -150,12 +150,12 @@ body{width:680px;height:380px;overflow:hidden;font-family:'Segoe UI',system-ui,s
       </div>
     </div>
     <div class="bio-area">
-      <span class="site-link">🔗 instabio.online</span>
+      <span class="site-link">🔗 instabiogen.online</span>
       ${bioHtml}
     </div>
   </div>
   <div class="domain-bar">
-    <span class="domain">instabio.online</span>
+    <span class="domain">instabiogen.online</span>
     <span class="dpill">2026</span>
   </div>
 </div>

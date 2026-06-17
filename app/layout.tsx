@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/apple-icon.svg", type: "image/svg+xml", sizes: "180x180" }],
   },
+  verification: {
+    google: "hoy5yKmvoaHZzZyOTI_Zknwkb_T4XZaD12EQAtXfwmE",
+  },
 };
 
 export const viewport: Viewport = {

@@ -30,6 +30,4 @@ Allow: /
 # Allow everyone else
 User-agent: *
 Allow: /
-Disallow: /cgi-bin/
-
-Sitemap: https://instabiogen.online/sitemap.xml
+Disallow: /cgi-bin/

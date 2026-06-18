@@ -17,7 +17,10 @@ export type FontStyleId =
   | "squared"
   | "negativeCircled"
   | "parenthesized"
-  | "smallCaps";
+  | "smallCaps"
+  | "bubble"
+  | "strikethrough"
+  | "underline";
 
 export const FONT_STYLES: { id: FontStyleId; label: string; preview?: string }[] = [
   { id: "normal", label: "Normal" },
@@ -39,11 +42,14 @@ export const FONT_STYLES: { id: FontStyleId; label: string; preview?: string }[]
   { id: "negativeCircled", label: "Negative Circled", preview: "🅛🅘🅥🅘🅝🅖" },
   { id: "parenthesized", label: "Parenthesized", preview: "⒫⒜⒭⒠⒩" },
   { id: "smallCaps", label: "Small Caps", preview: "ꜱᴍᴀʟʟ" },
+  { id: "bubble", label: "Bubble", preview: "ⓑⓤⓑⓑⓛⓔ" },
+  { id: "strikethrough", label: "Strike-through", preview: "S̶t̶r̶i̶k̶e̶" },
+  { id: "underline", label: "Underline", preview: "U̲n̲d̲e̲r̲l̲i̲n̲e̲" },
 ];
 
 type CharMap = { upper: number; lower: number };
 
-const MAPS: Record<Exclude<FontStyleId, "normal" | "smallCaps">, CharMap> = {
+const MAPS: Record<Exclude<FontStyleId, "normal" | "smallCaps" | "strikethrough" | "underline" | "bubble">, CharMap> = {
   stylish: { upper: 0x1d5d4, lower: 0x1d5ee },
   bold: { upper: 0x1d400, lower: 0x1d41a },
   fancy: { upper: 0x1d504, lower: 0x1d51e },
@@ -106,6 +112,19 @@ export function applyFontStyle(text: string, style: FontStyleId): string {
     return [...text]
       .map((c) => SMALL_CAPS[c.toLowerCase()] ?? c)
       .join("");
+  }
+
+  if (style === "strikethrough") {
+    return [...text].map(c => c + '\u0336').join("");
+  }
+
+  if (style === "underline") {
+    return [...text].map(c => c + '\u0332').join("");
+  }
+
+  if (style === "bubble") {
+    const map = MAPS["circled"];
+    return [...text].map((c) => transformChar(c, map)).join("");
   }
 
   const map = MAPS[style];

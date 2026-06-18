@@ -42,6 +42,8 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+import { Toaster } from 'react-hot-toast';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +61,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1 flex flex-col w-full min-w-0 overflow-x-hidden pt-14 sm:pt-16 md:pt-20">{children}</main>
           <Footer />
+          <Toaster position="bottom-center" />
         </ThemeProvider>
       </body>
     </html>

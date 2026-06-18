@@ -9,6 +9,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  outputFileTracing: false,
   images: {
     unoptimized: true,
     remotePatterns: [

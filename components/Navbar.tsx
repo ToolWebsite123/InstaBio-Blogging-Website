@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Logo from "@/components/Logo";
 
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -103,6 +104,7 @@ export default function Navbar() {
               </Link>
             )
           ))}
+
         </nav>
 
         <button
@@ -114,6 +116,7 @@ export default function Navbar() {
         >
           <Menu className="w-6 h-6" aria-hidden />
         </button>
+
       </div>
     </header>
 

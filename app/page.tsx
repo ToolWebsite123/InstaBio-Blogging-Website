@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import BioGeneratorSection from "@/components/BioGeneratorSection";
+import HomeContent from "@/components/HomeContent";
 
 const siteUrl = "https://instabiogen.online";
 
@@ -41,6 +42,20 @@ const jsonLd = [
     url: `${siteUrl}/`,
     isPartOf: { "@type": "WebSite", url: `${siteUrl}/` },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Instabiogen Bio Generator",
+    applicationCategory: "WebApplication",
+    operatingSystem: "Any",
+    description: "Generate stylish, trendy & creative Instagram bios with emojis, text styles, and live preview.",
+    url: `${siteUrl}/`,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD"
+    }
+  }
 ];
 
 export default function Home() {
@@ -52,6 +67,7 @@ export default function Home() {
       />
       <HeroSection />
       <BioGeneratorSection />
+      <HomeContent />
     </div>
   );
 }

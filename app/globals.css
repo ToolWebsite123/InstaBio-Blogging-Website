@@ -121,6 +121,22 @@
   display: none;
 }
 
+/* Elegant scrollbar for components */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 47, 191, 0.2);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(150, 47, 191, 0.4);
+}
+
 /* Prevent long bios / URLs from causing horizontal scroll */
 .prose-bio,
 .prose {

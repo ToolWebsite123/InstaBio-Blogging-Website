@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Copy, RefreshCw, Sparkles, Bookmark, Check, Search, Share2 } from "lucide-react";
+import { ChevronDown, Copy, RefreshCw, Sparkles, Bookmark, Check, Search, Share2, User } from "lucide-react";
 import toast from "react-hot-toast";
 import {
   BIO_CATEGORIES,
   type CategoryId,
   pickRandomBio,
+  personalizeBioWithName,
   CATEGORY_META,
   bios,
   type BioCategoryDef
@@ -458,6 +459,7 @@ type BioGeneratorProps = {
 };
 
 export default function BioGenerator({ className = "" }: BioGeneratorProps) {
+  const [userName, setUserName] = useState("");
   const [gender, setGender] = useState<Gender>("female");
   const [category, setCategory] = useState<CategoryId>("fitness");
   const [fontStyle, setFontStyle] = useState<FontStyleId>("fancy");
@@ -506,8 +508,13 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
         if (exclude.length === 0 || current.length >= poolSize) return [index];
         return [...current, index];
       });
+
+      // Personalize with name if provided
+      const personalizedLines = userName.trim()
+        ? personalizeBioWithName(raw, userName, category)
+        : raw;
       
-      const styledLines = raw.map((line) => applyFontStyle(line, fontStyle));
+      const styledLines = personalizedLines.map((line) => applyFontStyle(line, fontStyle));
       const bioText = styledLines.join("\n");
       const isSaved = savedBios.includes(bioText);
 
@@ -543,7 +550,12 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
           return [...current, index];
         });
 
-        const styledLines = raw.map((line) => applyFontStyle(line, fontStyle));
+        // Personalize with name if provided
+        const personalizedLines = userName.trim()
+          ? personalizeBioWithName(raw, userName, category)
+          : raw;
+
+        const styledLines = personalizedLines.map((line) => applyFontStyle(line, fontStyle));
         const bioText = styledLines.join("\n");
         
         return prev.map((v) => {
@@ -645,6 +657,35 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
       <div className="w-full flex flex-col lg:flex-row">
         {/* Settings - Left Side */}
         <div className="w-full lg:w-5/12 flex flex-col space-y-5 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-gray-100 bg-white">
+                {/* Name Input */}
+                <div>
+                  <label htmlFor="bio-user-name" className={fieldLabel}>
+                    <span className="flex items-center gap-1.5">
+                      <User className="w-3.5 h-3.5 text-[#962FBF]" />
+                      Your Name
+                    </span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      id="bio-user-name"
+                      type="text"
+                      value={userName}
+                      onChange={(e) => setUserName(e.target.value)}
+                      placeholder="Enter your name..."
+                      maxLength={30}
+                      className="w-full min-h-[44px] px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-[#262626] font-medium transition-all focus:border-[#962FBF] focus:ring-1 focus:ring-[#962FBF]/30 outline-none placeholder-gray-400"
+                    />
+                    {userName && (
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-[#962FBF] bg-[#f3e8ff] px-2 py-0.5 rounded-full">
+                        ✨ Personalized
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-[10px] text-gray-400 mt-1.5 leading-relaxed">
+                    Your bio will include your name for a personal touch
+                  </p>
+                </div>
+
                 <div>
                   <span className={fieldLabel}>Gender</span>
                   <div

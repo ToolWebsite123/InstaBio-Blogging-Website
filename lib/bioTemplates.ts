@@ -1432,3 +1432,131 @@ export function pickRandomBio(
 
   return { lines: [...pool[index]], index };
 }
+
+// Name-based personalization templates grouped by category mood
+const NAME_TEMPLATES: Record<string, string[]> = {
+  attitude: [
+    "👑 It's {name}'s world, you're just living in it",
+    "🔥 {name} — born to rule",
+    "😎 {name} doesn't follow trends, {name} sets them",
+    "⚡ {name} — unbothered & unstoppable",
+    "💯 Call me {name}, remember the name",
+    "🖤 {name} — too real for fake people",
+  ],
+  aesthetic: [
+    "✨ {name}'s aesthetic era",
+    "🌸 {name} — soft soul, bold vision",
+    "🌙 {name} vibes only",
+    "🦋 {name} — main character energy",
+    "💫 It's a {name} thing, you wouldn't get it",
+  ],
+  love: [
+    "❤️ {name} — hopelessly in love",
+    "💕 {name}'s heart is taken",
+    "🥰 {name} believes in forever",
+    "🌹 {name} — love is my superpower",
+    "💖 {name} — spreading love daily",
+  ],
+  cool: [
+    "😎 {name} — effortlessly cool",
+    "🕶️ {name} keeps it real",
+    "❄️ {name} — ice cold, fire soul",
+    "🌊 {name} — go with the flow",
+    "💫 {name} — low key, high value",
+  ],
+  motivational: [
+    "🚀 {name} — dream big, grind harder",
+    "💪 {name} never gives up",
+    "🔥 {name} — rising every day",
+    "🎯 {name} — focused on greatness",
+    "✨ {name}'s success story loading...",
+  ],
+  funny: [
+    "😂 {name} — professionally funny",
+    "🤪 {name} — 99% humor, 1% serious",
+    "🎭 {name} — making the world laugh",
+    "😁 {name} — allergic to boring",
+    "☕ {name} runs on coffee and chaos",
+  ],
+  professional: [
+    "💼 {name} — building something big",
+    "📈 {name} — results over excuses",
+    "🎯 {name} — on a mission",
+    "⭐ {name} — excellence is my standard",
+    "📊 {name} — work hard, stay humble",
+  ],
+  fitness: [
+    "💪 {name} — stronger every day",
+    "🏋️ {name}'s gym era",
+    "🔥 {name} — beast mode ON",
+    "⚡ {name} — no excuses, only gains",
+    "💯 {name} — built different",
+  ],
+  gaming: [
+    "🎮 {name} — pro gamer vibes",
+    "👾 {name} — leveling up daily",
+    "🏆 {name} — born to win",
+    "⚡ {name} — GG EZ",
+    "🕹️ {name} — respawn & dominate",
+  ],
+  music: [
+    "🎵 {name} — life is my playlist",
+    "🎧 {name} — lost in the music",
+    "🎤 {name} — born to sing",
+    "🎶 {name}'s world runs on beats",
+    "🎸 {name} — music is my therapy",
+  ],
+  default: [
+    "✨ It's {name}",
+    "👑 {name} — living my best life",
+    "🔥 {name} — one of a kind",
+    "💫 This is {name}'s story",
+    "⭐ {name} — just being me",
+    "🌟 {name} — shining bright always",
+    "🖤 {name} — real & rare",
+    "💯 {name} — authentically me",
+  ],
+};
+
+// Map categories to their closest name template group
+const CATEGORY_TO_TEMPLATE_GROUP: Partial<Record<CategoryId, string>> = {
+  attitude: "attitude",
+  aesthetic: "aesthetic",
+  love: "love",
+  couples: "love",
+  cool: "cool",
+  motivational: "motivational",
+  funny: "funny",
+  professional: "professional",
+  business: "professional",
+  entrepreneur: "professional",
+  fitness: "fitness",
+  sports: "fitness",
+  gaming: "gaming",
+  free_fire: "gaming",
+  pubg: "gaming",
+  music: "music",
+};
+
+/**
+ * Personalize bio lines by adding a name-based line.
+ * Replaces the first line of the bio with a personalized name line.
+ */
+export function personalizeBioWithName(
+  lines: string[],
+  name: string,
+  categoryId: CategoryId
+): string[] {
+  if (!name.trim()) return lines;
+
+  const trimmedName = name.trim();
+  const group = CATEGORY_TO_TEMPLATE_GROUP[categoryId] || "default";
+  const templates = NAME_TEMPLATES[group] || NAME_TEMPLATES["default"];
+  const template = templates[Math.floor(Math.random() * templates.length)];
+  const personalizedLine = template.replace(/\{name\}/g, trimmedName);
+
+  // Replace the first line with the personalized name line
+  const newLines = [...lines];
+  newLines[0] = personalizedLine;
+  return newLines;
+}

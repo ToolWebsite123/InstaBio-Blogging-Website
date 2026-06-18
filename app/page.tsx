@@ -6,7 +6,7 @@ import HomeContent from "@/components/HomeContent";
 const siteUrl = "https://instabiogen.online";
 
 export const metadata: Metadata = {
-  title: "Instabiogen.online | Best Instagram Bio Ideas, Captions & Quotes",
+  title: "Best Instagram Bio Generator Ideas, Captions & Quotes",
   description:
     "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabiogen.online",
   alternates: {

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy – Instabiogen.online | How We Protect Your Data",
   description: "Read the Privacy Policy of Instabiogen.online to understand how we collect, use, and protect your personal information. Your privacy is our priority.",
   alternates: {
-    canonical: "/privacy",
+    canonical: "https://instabiogen.online/privacy",
   },
 };
 

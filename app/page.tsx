@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabiogen.online",
   alternates: {
-    canonical: "/",
+    canonical: "https://instabiogen.online",
   },
 };
 

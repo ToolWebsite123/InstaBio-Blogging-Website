@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions – Instabiogen.online | Rules & Guidelines",
   description: "Review the Terms & Conditions of Instabiogen.online. Learn about content usage rules, intellectual property rights, user conduct, and our legal disclaimers.",
   alternates: {
-    canonical: "/terms",
+    canonical: "https://instabiogen.online/terms",
   },
 };
 

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const seoTitle = post.seoTitle || post.title;
   const seoDescription = post.seoDescription || post.excerpt;
-  const pageUrl = `${siteUrl}/${resolvedParams.slug}/`;
+  const pageUrl = `${siteUrl}/${resolvedParams.slug}`;
   const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
 
   return {
@@ -57,7 +57,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
-  const pageUrl = `${siteUrl}/${post.slug}/`;
+  const pageUrl = `${siteUrl}/${post.slug}`;
   const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
 
   const articleLd = {

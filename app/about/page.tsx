@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "About Us – Instabiogen.online | Where Your Instagram Story Begins",
   description: "We don't just write bios — we craft your first impression. Instabiogen.online was built for dreamers, creators & go-getters who refuse to be ordinary. Your perfect bio starts here.",
   alternates: {
-    canonical: "/about",
+    canonical: "https://instabiogen.online/about",
   },
 };
 

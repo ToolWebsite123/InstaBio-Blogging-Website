@@ -24,7 +24,7 @@ export default function RelatedPosts({ currentSlug }: RelatedPostsProps) {
         {related.map((story) => (
           <li key={story.slug}>
             <Link
-              href={`/${story.slug}/`}
+              href={`/${story.slug}`}
               className="text-[#D62976] hover:underline font-medium"
             >
               {story.title}

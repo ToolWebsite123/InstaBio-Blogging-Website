@@ -12,12 +12,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
-  const formatted = name.replace(/-/g, " ").toUpperCase();
+  const formatted = name.replace(/-/g, " ");
   return {
-    title: `${formatted} — Instagram Bios`,
-    description: `Browse the best ${formatted} Instagram bios.`,
+    title: `${formatted} Instagram Bios`,
+    description: `Browse ${formatted} Instagram bio collections and open the full copy-paste guides.`,
     alternates: {
       canonical: `https://instabiogen.online/category/${name}`,
+    },
+    robots: {
+      index: false,
+      follow: true,
     },
   };
 }
@@ -31,13 +35,21 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
 
   if (stories.length === 0) notFound();
 
-  const formatted = name.replace(/-/g, " ").toUpperCase();
+  const formatted = name.replace(/-/g, " ");
+  const title = formatted.replace(/\b\w/g, (char) => char.toUpperCase());
+  const guideCount = stories.length;
 
   return (
     <main className="min-h-screen bg-white">
       <header className="w-full bg-[linear-gradient(45deg,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] pt-10 pb-10 md:pt-16 md:pb-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white text-balance">{formatted}</h1>
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <p className="text-sm sm:text-base font-semibold uppercase tracking-[0.24em] text-white/80 mb-3">
+            Instagram Bio Category
+          </p>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-balance">{title}</h1>
+          <p className="mt-4 text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto">
+            Explore {guideCount} focused guide{guideCount === 1 ? "" : "s"} for {formatted} ideas, then open the full article for copy-paste bios, examples, and related profile tips.
+          </p>
         </div>
       </header>
 

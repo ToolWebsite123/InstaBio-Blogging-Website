@@ -25,7 +25,7 @@ export default function NotFound() {
           Go Home
         </Link>
         <Link
-          href="/blog/"
+          href="/blog"
           className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
         >
           Browse Blog

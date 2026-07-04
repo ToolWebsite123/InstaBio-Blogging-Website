@@ -71,6 +71,8 @@ function buildUrlEntry({ loc, lastmod, priority }) {
 }
 
 function generateSitemap() {
+  // Only include URLs that should be indexed. Thin category archives and
+  // iframe-backed banner assets are intentionally excluded.
   const entries = [...STATIC_PAGES, ...getBlogEntries()];
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',

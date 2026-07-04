@@ -1,6 +1,7 @@
 import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import type { ComponentProps, ReactNode } from "react";
 import MdxPostImage from "@/components/MdxPostImage";
 import BioCard from "@/components/BioCard";
 import BioGrid from "@/components/BioGrid";
@@ -9,6 +10,19 @@ import TOC from "@/components/TOC";
 import RelatedPosts from "@/components/RelatedPosts";
 
 const siteUrl = "https://instabiogen.online";
+
+function getHeadingText(children: ReactNode) {
+  return Array.isArray(children) ? children.join("") : children?.toString() ?? "";
+}
+
+function getHeadingSlug(children: ReactNode) {
+  return getHeadingText(children)
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
@@ -114,9 +128,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const jsonLd = [articleLd, breadcrumbLd];
 
   const components = {
-    h2: ({ children, ...props }: any) => {
-      const text = Array.isArray(children) ? children.join('') : children;
-      const slug = text?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '');
+    h2: ({ children, ...props }: ComponentProps<"h2">) => {
+      const slug = getHeadingSlug(children);
       return (
         <div className="mt-8 sm:mt-12 mb-6 sm:mb-8 first:mt-0">
           <div className="flex items-start gap-3 sm:gap-4 min-w-0">
@@ -126,29 +139,28 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
       );
     },
-    h3: ({ children, ...props }: any) => {
-      const text = Array.isArray(children) ? children.join('') : children;
-      const slug = text?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '');
+    h3: ({ children, ...props }: ComponentProps<"h3">) => {
+      const slug = getHeadingSlug(children);
       return <h3 id={slug} className="text-lg sm:text-xl font-semibold mt-8 sm:mt-10 mb-3 sm:mb-4 text-gray-800 break-words" {...props}>{children}</h3>;
     },
-    p: ({ children, ...props }: any) => (
+    p: ({ children, ...props }: ComponentProps<"p">) => (
       <p className="text-sm sm:text-[15px] leading-relaxed text-gray-600 mb-5" {...props}>{children}</p>
     ),
-    blockquote: ({ children, ...props }: any) => (
+    blockquote: ({ children, ...props }: ComponentProps<"div">) => (
       <div className="bg-[#F3E8FF] rounded-r-xl border-l-4 border-transparent [border-image:linear-gradient(to_bottom,#4F5BD5,#D62976,#FEDA77)_1] p-4 sm:p-6 my-6 sm:my-8 overflow-hidden">
         <span className="block text-xs font-bold uppercase tracking-widest text-[#962FBF] mb-2">Pro Tip</span>
         <div className="text-[#962FBF] font-medium text-sm sm:text-[15px] italic" {...props}>{children}</div>
       </div>
     ),
-    strong: ({ children, ...props }: any) => (
+    strong: ({ children, ...props }: ComponentProps<"strong">) => (
       <strong className="font-bold text-gray-900" {...props}>{children}</strong>
     ),
-    BioCard: (props: any) => <BioCard {...props} />,
-    BioGrid: (props: any) => <BioGrid {...props} />,
-    BioBanner: (props: any) => <BioBanner {...props} />,
-    TOC: (props: any) => <TOC {...props} />,
+    BioCard: (props: ComponentProps<typeof BioCard>) => <BioCard {...props} />,
+    BioGrid: (props: ComponentProps<typeof BioGrid>) => <BioGrid {...props} />,
+    BioBanner: (props: ComponentProps<typeof BioBanner>) => <BioBanner {...props} />,
+    TOC: () => <TOC />,
     img: ({ src, alt }: { src: string; alt?: string }) => (
-      <MdxPostImage src={src} alt={alt} />
+      <MdxPostImage src={src} alt={alt ?? ""} />
     ),
   };
 

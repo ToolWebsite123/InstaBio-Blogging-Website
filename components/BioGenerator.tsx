@@ -6,11 +6,11 @@ import toast from "react-hot-toast";
 import {
   BIO_CATEGORIES,
   type CategoryId,
+  type Gender,
   pickRandomBio,
   personalizeBioWithName,
   CATEGORY_META,
   bios,
-  type BioCategoryDef
 } from "@/lib/bioTemplates";
 import InstagramPreview from "./InstagramPreview";
 import {
@@ -26,6 +26,11 @@ const gradientBtn =
 
 const fieldLabel =
   "block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2";
+
+function getSuggestedHashtags(category: CategoryId) {
+  const label = CATEGORY_META[category].label.replace(/\s+/g, "");
+  return [`#${label}Bio`, "#InstagramBio", "#BioIdeas", "#InstaBio"];
+}
 
 function CustomSelect<T extends string>({
   value,
@@ -336,9 +341,9 @@ function BioCard({
         <textarea
           ref={textareaRef}
           value={outputText}
-          onChange={(e) => onEdit(variation.id, e.target.value)}
-          onFocus={(e) => onFocus(variation.id, e.target.selectionStart)}
-          onSelect={(e) => onSelect(variation.id, e.target.selectionStart)}
+          onChange={(e) => onEdit(variation.id, e.currentTarget.value)}
+          onFocus={(e) => onFocus(variation.id, e.currentTarget.selectionStart)}
+          onSelect={(e) => onSelect(variation.id, e.currentTarget.selectionStart)}
           className="w-full bg-transparent text-center resize-none overflow-hidden text-base sm:text-lg text-[#262626] leading-relaxed focus:outline-none placeholder-gray-400"
           rows={1}
           spellCheck={false}
@@ -466,6 +471,7 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
   const [variations, setVariations] = useState<GeneratedBio[]>([]);
   const [savedBios, setSavedBios] = useState<string[]>([]);
   const [lastFocusedBioId, setLastFocusedBioId] = useState<string | null>(null);
+  const [cursorPosition, setCursorPosition] = useState<number | null>(null);
   const [copiedEmoji, setCopiedEmoji] = useState<string | null>(null);
   const [copiedHashtags, setCopiedHashtags] = useState(false);
   const [previewBio, setPreviewBio] = useState<string | null>(null);
@@ -483,14 +489,14 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
       if (saved) {
         setSavedBios(JSON.parse(saved));
       }
-    } catch (e) {}
+    } catch {}
   }, []);
 
   const saveToLocal = (newSaved: string[]) => {
     setSavedBios(newSaved);
     try {
       localStorage.setItem("instabiogen_saved_bios", JSON.stringify(newSaved));
-    } catch (e) {}
+    } catch {}
   };
 
   const generate = () => {
@@ -651,6 +657,8 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
     }
   };
 
+  const suggestedHashtags = getSuggestedHashtags(category);
+
   return (
     <div className={`w-full ${className}`}>
     <div className={`w-full ${className}`}>
@@ -800,7 +808,7 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
                     </span>
                     <button
                       onClick={async () => {
-                        const hashtags = CATEGORY_META[category]?.hashtags?.join(" ") || "";
+                        const hashtags = suggestedHashtags.join(" ");
                         await navigator.clipboard.writeText(hashtags);
                         toast.success("Hashtags copied!");
                         setCopiedHashtags(true);
@@ -813,7 +821,7 @@ export default function BioGenerator({ className = "" }: BioGeneratorProps) {
                     </button>
                   </div>
                   <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto custom-scrollbar pr-2">
-                    {CATEGORY_META[category]?.hashtags?.map((tag) => (
+                    {suggestedHashtags.map((tag) => (
                       <span
                         key={tag}
                         className="px-2.5 py-1 rounded-lg bg-[#f3e8ff]/50 text-[#962FBF] text-xs font-medium border border-[#962FBF]/10"

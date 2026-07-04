@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  devIndicators: false,  // ✅ ye line add ki
+  devIndicators: false,
   output: 'export',
   trailingSlash: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  outputFileTracing: false,
   images: {
     unoptimized: true,
     remotePatterns: [

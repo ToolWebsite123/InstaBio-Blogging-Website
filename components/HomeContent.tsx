@@ -231,7 +231,7 @@ export default function HomeContent() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-              Got questions? We've got answers. Here is everything you need to know about our generator.
+              Got questions? We&apos;ve got answers. Here is everything you need to know about our generator.
             </p>
           </div>
 

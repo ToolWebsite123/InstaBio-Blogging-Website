@@ -2,12 +2,8 @@
   X-Robots-Tag: index, follow
   Cache-Control: public, max-age=3600
 
-/All instagram bio/*
-  X-Robots-Tag: noindex, follow
-  Cache-Control: public, max-age=31536000, immutable
-
-/All%20instagram%20bio/*
-  X-Robots-Tag: noindex, follow
+/banner-images/*
+  X-Robots-Tag: index, follow
   Cache-Control: public, max-age=31536000, immutable
 
 /404/

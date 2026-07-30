@@ -4,6 +4,11 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface PostMeta {
   slug: string;
   title: string;
@@ -14,6 +19,7 @@ export interface PostMeta {
   readTime: string;
   seoTitle?: string;
   seoDescription?: string;
+  faqs?: FaqItem[];
 }
 
 export interface Post extends PostMeta {
@@ -49,6 +55,7 @@ export function getPostBySlug(slug: string): Post {
     readTime: data.readTime || "3 min read",
     seoTitle: data.seoTitle,
     seoDescription: data.seoDescription,
+    faqs: Array.isArray(data.faqs) ? data.faqs : undefined,
     content,
   };
 }

@@ -26,11 +26,24 @@ export const metadata: Metadata = {
     siteName: "Instabiogen.online",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "Instabiogen.online" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Instabiogen.online | Best Instagram Bio Ideas, Captions & Quotes",
+    description: "Discover thousands of stylish, trendy & creative Instagram bios for boys, girls, lovers & professionals. Find the perfect bio that matches your vibe — only at Instabiogen.online",
+    images: ["/og-default.jpg"],
   },
 
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml", sizes: "180x180" }],
+    icon: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+      { url: "/apple-icon.png", type: "image/png", sizes: "180x180" },
+    ],
   },
   verification: {
     google: "hoy5yKmvoaHZzZyOTI_Zknwkb_T4XZaD12EQAtXfwmE",

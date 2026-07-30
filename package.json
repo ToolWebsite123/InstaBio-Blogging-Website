@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.js && set NODE_OPTIONS=--max_old_space_size=4096 && next build",
+    "build": "node scripts/generate-sitemap.js && cross-env NODE_OPTIONS=--max_old_space_size=8192 next build",
     "sitemap": "node scripts/generate-sitemap.js",
     "banners": "node scripts/insert-banner-images.js",
     "start": "next start",
@@ -30,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^8",
     "eslint-config-next": "^15.5.15",
     "postcss": "^8",

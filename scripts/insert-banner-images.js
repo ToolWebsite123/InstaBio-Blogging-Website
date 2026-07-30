@@ -78,7 +78,8 @@ function findSectionKey(headline, sectionKeys) {
 }
 
 function publicBannerPath(folderName, fileName) {
-  const encoded = encodeURI(`/All instagram bio/${folderName}/${fileName}`);
+  const webpFileName = fileName.replace(/\.html$/, ".webp");
+  const encoded = encodeURI(`/banner-images/${folderName}/${webpFileName}`);
   return encoded;
 }
 

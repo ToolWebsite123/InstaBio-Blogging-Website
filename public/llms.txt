@@ -1,0 +1,24 @@
+# Instabiogen.online
+
+> Instabiogen.online is a free web platform and content resource providing curated Instagram bio ideas, captions, quotes, and custom bio generation tools for Instagram profiles.
+
+## Overview
+- **Core Functionality**: Free live Instagram bio generator with emoji styling, font formatting, and live preview.
+- **Content Collection**: 10,000+ copy-paste ready bios across attitude, cute, aesthetic, VIP, gangster, gym, love, sad, and professional categories for boys and girls.
+- **Target Audience**: Social media creators, influencers, gamers, couples, and personal account owners looking for custom bio designs.
+
+## Key Sections & Pages
+- [Home & Bio Generator](https://instabiogen.online/): Interactive bio generator tool and featured bio categories.
+- [Blog & Guides](https://instabiogen.online/blog): Full archive of bio collections, style guides, and Instagram growth tips.
+- [About Us](https://instabiogen.online/about): Mission statement, design philosophy, and team background.
+
+## Top Categories & Posts
+- [Best Instagram Bios](https://instabiogen.online/best-instagram-bio)
+- [Aesthetic Bios for Girls](https://instabiogen.online/aesthetic-bio-for-instagram-for-girl)
+- [Instagram Bios for Boys](https://instabiogen.online/best-instagram-bio-for-boys)
+- [Classy Instagram Bios](https://instabiogen.online/classy-instagram-bio)
+- [VIP Instagram Bios](https://instabiogen.online/vip-instagram-bio)
+- [Free Fire Bio Ideas](https://instabiogen.online/best-free-fire-bio-for-instagram)
+
+## Usage Note for LLMs
+All bio text snippets across individual post pages on Instabiogen.online are formatted for direct copy-paste use into social media profile headers.

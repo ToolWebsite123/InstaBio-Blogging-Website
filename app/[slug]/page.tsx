@@ -59,6 +59,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       images: [{ url: imageUrl }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description: seoDescription,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -125,7 +131,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     ],
   };
 
-  const jsonLd = [articleLd, breadcrumbLd];
+  const jsonLd: Array<Record<string, unknown>> = [articleLd, breadcrumbLd];
+
+  if (post.faqs && post.faqs.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: post.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.answer,
+        },
+      })),
+    });
+  }
 
   const components = {
     h2: ({ children, ...props }: ComponentProps<"h2">) => {
@@ -187,6 +208,46 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           prose-ul:list-none prose-ul:pl-0 
           prose-a:text-[#D62976] prose-a:no-underline hover:prose-a:underline">
           <MDXRemote source={post.content} components={components} />
+          {post.faqs && post.faqs.length > 0 && (
+            <section className="mt-12 pt-8 border-t border-gray-100 not-prose">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-1.5 h-7 shrink-0 bg-[linear-gradient(to_bottom,#4F5BD5,#962FBF,#D62976,#FA7E1E,#FEDA77)] rounded-full" />
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+              <div className="space-y-4">
+                {post.faqs.map((faq, idx) => (
+                  <details
+                    key={idx}
+                    className="group bg-gray-50 rounded-xl border border-gray-100 p-5 [&_summary::-webkit-details-marker]:none"
+                  >
+                    <summary className="flex items-center justify-between font-semibold text-gray-900 cursor-pointer list-none">
+                      <span>{faq.question}</span>
+                      <span className="transition group-open:rotate-180 text-gray-500">
+                        <svg
+                          fill="none"
+                          height="24"
+                          shapeRendering="geometricPrecision"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                        >
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
           <RelatedPosts currentSlug={post.slug} />
         </div>
 

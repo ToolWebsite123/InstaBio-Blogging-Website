@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://instabiogen.online/about",
   },
+  openGraph: {
+    title: "About Us – Instabiogen.online | Where Your Instagram Story Begins",
+    description: "We don't just write bios — we craft your first impression. Instabiogen.online was built for dreamers, creators & go-getters who refuse to be ordinary. Your perfect bio starts here.",
+    url: "https://instabiogen.online/about",
+    siteName: "Instabiogen.online",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "https://instabiogen.online/og-default.jpg", width: 1200, height: 630, alt: "About Instabiogen.online" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us – Instabiogen.online | Where Your Instagram Story Begins",
+    description: "We don't just write bios — we craft your first impression. Instabiogen.online was built for dreamers, creators & go-getters who refuse to be ordinary. Your perfect bio starts here.",
+    images: ["https://instabiogen.online/og-default.jpg"],
+  },
 };
 
 export default function AboutPage() {

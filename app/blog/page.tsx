@@ -9,6 +9,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://instabiogen.online/blog",
   },
+  openGraph: {
+    title: "Blog - Instabiogen.online",
+    description: "Browse our latest collection of Instagram bios, captions and quotes.",
+    url: "https://instabiogen.online/blog",
+    siteName: "Instabiogen.online",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "https://instabiogen.online/og-default.jpg", width: 1200, height: 630, alt: "Instabiogen.online Blog" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog - Instabiogen.online",
+    description: "Browse our latest collection of Instagram bios, captions and quotes.",
+    images: ["https://instabiogen.online/og-default.jpg"],
+  },
 };
 
 export default function BlogPage() {

@@ -1,4 +1,20 @@
-import BioGenerator from "@/components/BioGenerator";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const BioGenerator = dynamic(() => import("@/components/BioGenerator"), {
+  ssr: false,
+  loading: () => (
+    <div className="p-8 min-h-[420px] flex flex-col items-center justify-center space-y-6 animate-pulse bg-gray-50/50 rounded-2xl">
+      <div className="h-7 bg-gray-200 rounded-lg w-48 mx-auto" />
+      <div className="w-full max-w-lg space-y-3">
+        <div className="h-10 bg-gray-200 rounded-xl w-full" />
+        <div className="h-28 bg-gray-200 rounded-xl w-full" />
+        <div className="h-12 bg-gray-200 rounded-xl w-3/4 mx-auto" />
+      </div>
+    </div>
+  ),
+});
 
 export default function BioGeneratorSection() {
   return (

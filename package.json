@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.js && cross-env NODE_OPTIONS=--max_old_space_size=8192 next build",
-    "sitemap": "node scripts/generate-sitemap.js",
+    "build": "node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js && cross-env NODE_OPTIONS=--max_old_space_size=8192 next build",
+    "sitemap": "node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js",
     "banners": "node scripts/insert-banner-images.js",
     "start": "next start",
     "lint": "next lint"

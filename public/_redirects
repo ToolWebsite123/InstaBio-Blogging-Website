@@ -1,5 +1,9 @@
+# Redirect trailing slashes to non-trailing-slash canonical URLs
+/:slug/  /:slug  301
+/category/:name/  /category/:name  301
+
+# Legacy deleted content (410 Gone)
 /napoletana  /  410
 /napoletana/  /  410
 /napolitana  /  410
 /napolitana/  /  410
-

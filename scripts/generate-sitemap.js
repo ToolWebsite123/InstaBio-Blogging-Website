@@ -54,7 +54,7 @@ function getBlogEntries() {
       return {
         loc: pageUrl(`/${slug}`),
         priority: "0.9",
-        lastmod: toLastmod(data.date),
+        lastmod: toLastmod(data.updatedDate || data.lastmod || data.date),
       };
     })
     .sort((a, b) => (a.loc > b.loc ? 1 : -1));

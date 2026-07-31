@@ -89,11 +89,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     mainEntityOfPage: pageUrl,
     image: imageUrl,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedDate || post.date,
     author: {
-      "@type": "Organization",
-      name: "Instabiogen.online",
-      url: `${siteUrl}/`,
+      "@type": "Person",
+      name: "InstaBioGen Editorial Team",
+      url: `${siteUrl}/about`,
     },
     publisher: {
       "@type": "Organization",
@@ -144,6 +144,21 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           "@type": "Answer",
           text: f.answer,
         },
+      })),
+    });
+  }
+
+  if (post.howTo && post.howTo.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: `How to Choose & Style ${post.title}`,
+      description: post.excerpt,
+      step: post.howTo.map((step, idx) => ({
+        "@type": "HowToStep",
+        position: idx + 1,
+        name: step.name,
+        text: step.text,
       })),
     });
   }

@@ -9,17 +9,24 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
 export interface PostMeta {
   slug: string;
   title: string;
   excerpt: string;
   date: string;
+  updatedDate?: string;
   category: string;
   image: string;
   readTime: string;
   seoTitle?: string;
   seoDescription?: string;
   faqs?: FaqItem[];
+  howTo?: HowToStep[];
 }
 
 export interface Post extends PostMeta {
@@ -50,12 +57,14 @@ export function getPostBySlug(slug: string): Post {
     title: data.title,
     excerpt: data.excerpt || data.description || "",
     date: data.date,
+    updatedDate: data.updatedDate || data.lastmod || data.date,
     category: data.category,
     image: bannerSrc || data.image || "/images/placeholder.jpg",
     readTime: data.readTime || "3 min read",
     seoTitle: data.seoTitle,
     seoDescription: data.seoDescription,
     faqs: Array.isArray(data.faqs) ? data.faqs : undefined,
+    howTo: Array.isArray(data.howTo) ? data.howTo : undefined,
     content,
   };
 }

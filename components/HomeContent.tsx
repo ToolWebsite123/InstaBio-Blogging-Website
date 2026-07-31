@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Sparkles, PenTool, Copy, Check, ChevronDown, ListChecks, MessageSquare, Hash, User, UserPlus, Gamepad2, ArrowRight } from "lucide-react";
 
 function FAQItem({ q, a, idx }: { q: string; a: string; idx: number }) {
@@ -197,13 +198,13 @@ export default function HomeContent() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {[
-              { title: "Instagram Bio for Girls", desc: "Generate cute, aesthetic, attitude, and stylish bios specifically crafted for girls.", icon: User, gradient: "from-[#D62976] to-[#FA7E1E]" },
-              { title: "Instagram Bio for Boys", desc: "Create confident, stylish, funny, and motivational bios tailored for boys and men.", icon: UserPlus, gradient: "from-[#4F5BD5] to-[#962FBF]" },
-              { title: "Instagram Bio for Free Fire", desc: "Generate gaming-themed bios for Free Fire players, squads, and fan pages.", icon: Gamepad2, gradient: "from-[#FA7E1E] to-[#FEDA77]" },
-              { title: "Instagram Caption Generator", desc: "Craft compelling captions for your Instagram posts instantly.", icon: MessageSquare, gradient: "from-[#962FBF] to-[#D62976]" },
-              { title: "Instagram Hashtag Generator", desc: "Generate relevant hashtags to increase your content's reach and visibility.", icon: Hash, gradient: "from-[#4F5BD5] to-[#D62976]" },
+              { title: "Instagram Bio for Girls", desc: "Generate cute, aesthetic, attitude, and stylish bios specifically crafted for girls.", icon: User, gradient: "from-[#D62976] to-[#FA7E1E]", href: "/best-instagram-bio-for-girls" },
+              { title: "Instagram Bio for Boys", desc: "Create confident, stylish, funny, and motivational bios tailored for boys and men.", icon: UserPlus, gradient: "from-[#4F5BD5] to-[#962FBF]", href: "/best-instagram-bio-for-boys" },
+              { title: "Instagram Bio for Free Fire", desc: "Generate gaming-themed bios for Free Fire players, squads, and fan pages.", icon: Gamepad2, gradient: "from-[#FA7E1E] to-[#FEDA77]", href: "/best-free-fire-bio-for-instagram" },
+              { title: "Instagram Caption Generator", desc: "Craft compelling captions for your Instagram posts instantly.", icon: MessageSquare, gradient: "from-[#962FBF] to-[#D62976]", href: "/instagram-bio-captions" },
+              { title: "Instagram Hashtag Generator", desc: "Generate relevant hashtags to increase your content's reach and visibility.", icon: Hash, gradient: "from-[#4F5BD5] to-[#D62976]", href: "/short-bio-for-instagram" },
             ].map((tool, idx) => (
-              <div key={idx} className="group bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-xl hover:shadow-purple-100/30 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer relative overflow-hidden">
+              <Link key={idx} href={tool.href} className="group bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-xl hover:shadow-purple-100/30 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer relative overflow-hidden block">
                 {/* Hover gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${tool.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}></div>
                 
@@ -212,8 +213,7 @@ export default function HomeContent() {
                 </div>
                 <h3 className="font-bold text-gray-800 text-base mb-2 relative z-10">{tool.title}</h3>
                 <p className="text-sm text-gray-500 mb-4 flex-grow leading-relaxed relative z-10">{tool.desc}</p>
-               
-              </div>
+              </Link>
             ))}
           </div>
         </div>

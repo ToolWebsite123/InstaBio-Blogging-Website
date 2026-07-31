@@ -91,8 +91,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     datePublished: post.date,
     dateModified: post.updatedDate || post.date,
     author: {
-      "@type": "Person",
-      name: "InstaBioGen Editorial Team",
+      "@type": "Organization",
+      name: "Instabiogen.online",
       url: `${siteUrl}/about`,
     },
     publisher: {

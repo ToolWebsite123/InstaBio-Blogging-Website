@@ -48,7 +48,7 @@ export default function InstagramPreview({
                 <div className="w-full h-full rounded-full border-2 border-white overflow-hidden bg-gray-100">
                   <img 
                     src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" 
-                    alt="Avatar" 
+                    alt="" 
                     className="w-full h-full object-cover"
                   />
                 </div>

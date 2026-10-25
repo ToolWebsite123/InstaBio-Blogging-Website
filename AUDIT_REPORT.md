@@ -149,9 +149,9 @@ Counts below include only findings documented above; unexecuted checks are not c
 |---|---:|
 | Critical | 0 |
 | High | 0 |
-| Medium | 5 |
+| Medium | 6 |
 | Low | 5 |
-| **Total** | **10** |
+| **Total** | **11** |
 
 ## 5. Category scores (provisional)
 

@@ -60,6 +60,20 @@ The live homepage text fetch succeeded and showed the main bio-generator landing
 - **Impact:** Each build can make search engines see unchanged static URLs as recently modified, reducing the usefulness of sitemap modification dates.
 - **Fix:** Use actual page/content modification dates where available, or omit `lastmod` for static pages when a reliable date is not available. Do not set it to the build date solely because a build occurred.
 
+### [Banner insertion script expects a legacy directory and HTML input files]
+- **Severity:** Medium
+- **Category:** Build tooling / Content operations
+- **Location:** `scripts/insert-banner-images.js`, `BANNER_ROOT` declaration and `.filter((f) => f.endsWith(".html"))`
+- **Problem:** The script expects its source directory to be `public/All instagram bio` and scans that directory's subfolders for HTML files. The inspected repository tree instead contains banner assets under `public/banner-images/`; no `public/All instagram bio` directory was present in the tracked tree. The script's mapping and HTML-input assumption also differ from the visible WebP asset collection.
+- **Impact:** Running the script from a clean checkout may fail with a missing-directory error or find no source files, so the intended MDX banner updates may not happen. It writes to MDX files, so do not run it against the working tree without a backup/diff review.
+- **Fix:** Confirm whether legacy HTML source files are stored outside Git. If they are not, either retire the script or deliberately update its input format, folder mapping, and tests to match the intended source assets. Add an explicit existence check before reading:
+  ```js
+  if (!fs.existsSync(BANNER_ROOT)) {
+    throw new Error(`Banner source directory does not exist: ${BANNER_ROOT}`);
+  }
+  ```
+  Test only on a temporary copy and inspect the diff before committing.
+
 ### [The README is still the create-next-app starter guide]
 - **Severity:** Low
 - **Category:** Documentation / Repository health
@@ -129,7 +143,7 @@ These checks were **not run**, so this report makes no claims about their pass/f
 
 ## 4. Severity summary
 
-Counts below include only findings documented above; unexecuted checks are not counted as issues.
+Counts below include only findings documented above; unexecuted checks are not counted as issues. Adding the banner-script finding brings the confirmed source-review total to 11 findings.
 
 | Severity | Count |
 |---|---:|
